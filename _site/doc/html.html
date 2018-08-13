@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.3.0 -->
+<title>Arkane | Arkane.Network : Next generation blockchain wallet provider</title>
+<meta property="og:title" content="Arkane" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Arkane.Network : Next generation blockchain wallet provider" />
+<meta property="og:description" content="Arkane.Network : Next generation blockchain wallet provider" />
+<link rel="canonical" href="http://localhost:4000/doc/html.html" />
+<meta property="og:url" content="http://localhost:4000/doc/html.html" />
+<meta property="og:site_name" content="Arkane" />
+<script type="application/ld+json">
+{"publisher":null,"author":null,"description":"Arkane.Network : Next generation blockchain wallet provider","name":null,"headline":"Arkane","dateModified":null,"datePublished":null,"sameAs":null,"@type":"WebPage","image":null,"mainEntityOfPage":null,"url":"http://localhost:4000/doc/html.html","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link href="/assets/css/style.css?v=866bf9058a355602b86c2a3c9a2d46650da6295d" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container-lg px-3 my-5 markdown-body">
+      
+        <h1><a href="http://localhost:4000/">Arkane</a></h1>
+      
+
+      <p><a href="https://html5boilerplate.com/">HTML5 Boilerplate homepage</a> | <a href="/doc/TOC.html">Documentation
+table of contents</a></p>
+
+<h1 id="the-html">The HTML</h1>
+
+<p>By default, HTML5 Boilerplate provides two <code class="highlighter-rouge">html</code> pages:</p>
+
+<ul>
+  <li><a href="#indexhtml"><code class="highlighter-rouge">index.html</code></a> - a default HTML skeleton that should form the
+basis of all pages on your website</li>
+  <li><a href="#404html"><code class="highlighter-rouge">404.html</code></a> - a placeholder 404 error page</li>
+</ul>
+
+<h2 id="indexhtml"><code class="highlighter-rouge">index.html</code></h2>
+
+<h3 id="the-no-js-class">The <code class="highlighter-rouge">no-js</code> Class</h3>
+
+<p>The <code class="highlighter-rouge">no-js</code> class is provided in order to allow you to more easily and
+explicitly add custom styles based on whether JavaScript is disabled
+(<code class="highlighter-rouge">.no-js</code>) or enabled (<code class="highlighter-rouge">.js</code>). Using this technique also helps <a href="https://www.paulirish.com/2009/avoiding-the-fouc-v3/">avoid the
+FOUC</a>.</p>
+
+<h2 id="language-attribute">Language Attribute</h2>
+
+<p>Please consider specifying the language of your content by adding a <a href="https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry">value</a> to the <code class="highlighter-rouge">lang</code>
+attribute in the <code class="highlighter-rouge"><span class="nt">&lt;html&gt;</span></code> as in this example:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;html</span> <span class="na">class=</span><span class="s">"no-js"</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
+</code></pre></div></div>
+
+<h3 id="the-order-of-the-title-and-meta-tags">The order of the <code class="highlighter-rouge">&lt;title&gt;</code> and <code class="highlighter-rouge">&lt;meta&gt;</code> tags</h3>
+
+<p>The order in which the <code class="highlighter-rouge">&lt;title&gt;</code> and the <code class="highlighter-rouge">&lt;meta&gt;</code> tags are specified is
+important because:</p>
+
+<p>1) the charset declaration (<code class="highlighter-rouge">&lt;meta charset="utf-8"&gt;</code>):</p>
+
+<ul>
+  <li>
+    <p>must be included completely within the <a href="https://www.whatwg.org/specs/web-apps/current-work/multipage/semantics.html#charset">first 1024 bytes of the
+document</a></p>
+  </li>
+  <li>
+    <p>should be specified as early as possible (before any content that could
+be controlled by an attacker, such as a <code class="highlighter-rouge">&lt;title&gt;</code> element) in order to
+avoid a potential <a href="https://code.google.com/p/doctype-mirror/wiki/ArticleUtf7">encoding-related security
+issue</a> in
+Internet Explorer</p>
+  </li>
+</ul>
+
+<p>2) the meta tag for compatibility mode
+   (<code class="highlighter-rouge">&lt;meta http-equiv="x-ua-compatible" content="ie=edge"&gt;</code>):</p>
+
+<ul>
+  <li><a href="https://msdn.microsoft.com/en-us/library/cc288325.aspx">needs to be included before all other tags except for the <code class="highlighter-rouge">&lt;title&gt;</code> and
+the other <code class="highlighter-rouge">&lt;meta&gt;</code>
+tags</a></li>
+</ul>
+
+<h3 id="x-ua-compatible"><code class="highlighter-rouge">x-ua-compatible</code></h3>
+
+<p>Internet Explorer 8/9/10 support <a href="https://msdn.microsoft.com/en-us/library/cc288325.aspx">document compatibility
+modes</a> that affect the
+way webpages are interpreted and displayed. Because of this, even if your site’s
+visitor is using, let’s say, Internet Explorer 9, it’s possible that IE will not
+use the latest rendering engine, and instead, decide to render your page using
+the Internet Explorer 5.5 rendering engine.</p>
+
+<p>Specifying the <code class="highlighter-rouge">x-ua-compatible</code> meta tag:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">"x-ua-compatible"</span> <span class="na">content=</span><span class="s">"ie=edge"</span><span class="nt">&gt;</span>
+</code></pre></div></div>
+
+<p>or sending the page with the following HTTP response header</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>X-UA-Compatible: IE=edge
+</code></pre></div></div>
+
+<p>will force Internet Explorer 8/9/10 to render the webpage in the highest
+available mode in <a href="https://hsivonen.fi/doctype/#ie8">the various cases when it may
+not</a>, and therefore, ensure that anyone
+browsing your site is treated to the best possible user experience that
+browser can offer.</p>
+
+<p>If possible, we recommend that you remove the <code class="highlighter-rouge">meta</code> tag and send only the
+HTTP response header as the <code class="highlighter-rouge">meta</code> tag will not always work if your site is
+served on a non-standard port, as Internet Explorer’s preference option
+<code class="highlighter-rouge">Display intranet sites in Compatibility View</code> is checked by default.</p>
+
+<p>If you are using Apache as your webserver, including the
+<a href="https://github.com/h5bp/server-configs-apache"><code class="highlighter-rouge">.htaccess</code></a> file takes care of
+the HTTP header. If you are using a different server, check out our <a href="https://github.com/h5bp/server-configs">other
+server config</a>.</p>
+
+<p>Starting with Internet Explorer 11, <a href="https://msdn.microsoft.com/library/bg182625.aspx#docmode">document modes are
+deprecated</a>.
+If your business still relies on older web apps and services that were
+designed for older versions of Internet Explorer, you might want to consider
+enabling <a href="https://blogs.msdn.microsoft.com/ie/2014/04/02/stay-up-to-date-with-enterprise-mode-for-internet-explorer-11/">Enterprise Mode</a> throughout your company.</p>
+
+<h2 id="meta-description">Meta Description</h2>
+
+<p>The <code class="highlighter-rouge">description</code> meta tag provides a short description of the page. 
+In some situations this description is used as a part of the snippet 
+shown in the search results.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"description"</span> <span class="na">content=</span><span class="s">"This is a description"</span><span class="nt">&gt;</span>
+</code></pre></div></div>
+
+<h2 id="mobile-viewport">Mobile Viewport</h2>
+
+<p>There are a few different options that you can use with the <a href="https://docs.google.com/present/view?id=dkx3qtm_22dxsrgcf4" title="Viewport and
+Media Queries - The Complete Idiot's Guide"><code class="highlighter-rouge">viewport</code> meta
+tag</a>. You can find out more in <a href="https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariWebContent/UsingtheViewport/UsingtheViewport.html">the
+Apple developer docs</a>.
+HTML5 Boilerplate comes with a simple setup that strikes a good balance for general use cases.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1"</span><span class="nt">&gt;</span>
+</code></pre></div></div>
+
+<h2 id="web-app-manifest">Web App Manifest</h2>
+<p>HTML5 Boilerplate includes a simple web app manifest file.</p>
+
+<p>The web app manifest is a simple JSON file that allows you to control how your 
+app appears on a device’s home screen, what it looks like when it launches
+in that context and what happens when it is launched. This allows for much greater
+control over the UI of a saved site or web app on a mobile device.</p>
+
+<p>It’s linked to from the HTML as follows:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"manifest"</span> <span class="na">href=</span><span class="s">"site.webmanifest"</span><span class="nt">&gt;</span>
+</code></pre></div></div>
+<p>Our <a href="https://github.com/h5bp/html5-boilerplate/blob/master/src/site.webmanifest">site.webmanifest</a> contains a very skeletal “app” definition, just to show the basic usage. 
+You should fill this file out with <a href="https://developer.mozilla.org/en-US/docs/Web/Manifest">more information about your site or application</a></p>
+
+<h2 id="favicons-and-touch-icon">Favicons and Touch Icon</h2>
+
+<p>The shortcut icons should be put in the root directory of your site. <code class="highlighter-rouge">favicon.ico</code> 
+is automatically picked up by browsers if it’s placed in the root.  HTML5
+Boilerplate comes with a default set of icons (include favicon and one Apple
+Touch Icon) that you can use as a baseline to create your own.</p>
+
+<p>Please refer to the more detailed description in the <a href="/doc/extend.html">Extend section</a>
+of these docs.</p>
+
+<h2 id="the-content-area">The Content Area</h2>
+
+<p>The central part of the boilerplate template is pretty much empty. This is
+intentional, in order to make the boilerplate suitable for both web page and
+web app development.</p>
+
+<h3 id="browser-upgrade-prompt">Browser Upgrade Prompt</h3>
+
+<p>The main content area of the boilerplate includes a prompt to install an up to
+date browser for users of IE 8 and lower. If you intended to support IE 8, then you
+should remove the snippet of code.</p>
+
+<h2 id="modernizr">Modernizr</h2>
+
+<p>HTML5 Boilerplate uses a custom build of Modernizr.</p>
+
+<p><a href="https://modernizr.com/">Modernizr</a> is a JavaScript library which adds classes to
+the <code class="highlighter-rouge">html</code> element based on the results of feature test and which ensures that
+all browsers can make use of HTML5 elements (as it includes the HTML5 Shiv).
+This allows you to target parts of your CSS and JavaScript based on the
+features supported by a browser.</p>
+
+<p>Starting with version 3 Modernizr can be customized using the <a href="https://github.com/h5bp/html5-boilerplate/blob/master/modernizr-config.json">modernizr-config.json</a> and the
+<a href="https://www.npmjs.com/package/modernizr-cli">Modernizr command line utility</a>.</p>
+
+<h2 id="what-about-polyfills">What About Polyfills?</h2>
+
+<p>If you need to include <a href="https://remysharp.com/2010/10/08/what-is-a-polyfill">polyfills</a>
+in your project, you must make sure those load before any other JavaScript. If you’re
+using some polyfill CDN service, like <a href="https://cdn.polyfill.io/">cdn.polyfill.io</a>,
+just put it before the other scripts in the bottom of the page:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"js/vendor/modernizr-3.6.0.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdn.polyfill.io/v2/polyfill.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://code.jquery.com/jquery-3.3.1.min.js"</span> <span class="na">integrity=</span><span class="s">"sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span>
+    <span class="nt">&lt;script&gt;</span><span class="nb">window</span><span class="p">.</span><span class="nx">jQuery</span> <span class="o">||</span> <span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s1">'&lt;script src="js/vendor/jquery-3.3.1.min.js"&gt;&lt;</span><span class="err">\</span><span class="s1">/script&gt;'</span><span class="p">)</span><span class="nt">&lt;/script&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"js/plugins.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"js/main.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+</code></pre></div></div>
+
+<p>If you like to just include the polyfills yourself, you could include them in
+<code class="highlighter-rouge">js/plugins.js</code>. When you have a bunch of polyfills to load in, you could
+also create a <code class="highlighter-rouge">polyfills.js</code> file in the <code class="highlighter-rouge">js/vendor</code> directory or include the files 
+individually and combine them using a build tool. Always ensure that the polyfills 
+are all loaded before any other JavaScript.</p>
+
+<p>There are some misconceptions about Modernizr and polyfills. It’s important
+to understand that Modernizr just handles feature checking, not polyfilling
+itself. The only thing Modernizr does regarding polyfills is that the team
+maintains <a href="https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-Browser-Polyfills">a huge list of cross Browser polyfills</a>.</p>
+
+<h3 id="jquery-cdn-for-jquery">jQuery CDN for jQuery</h3>
+
+<p>The jQuery CDN version of the jQuery JavaScript library is referenced towards
+the bottom of the page. A local fallback of jQuery is included for rare instances
+when the CDN version might not be available, and to facilitate offline
+development.</p>
+
+<p>The jQuery CDN version was chosen over other potential candidates
+(<a href="https://developers.google.com/speed/libraries/">like Google’s Hosted Libraries</a>)
+because it’s fast (<a href="https://www.cdnperf.com/#jsdelivr,cdnjs,google,yandex,microsoft,jquery,bootstrapcdn/https/90">comparable or faster than Google by some
+measures</a>)
+and, (unlike Google’s CDN) is available to China’s hundreds of millions of internet users.
+For many years we <a href="https://github.com/h5bp/html5-boilerplate/issues/1191">chose</a>
+the Google Hosted version over the jQuery CDN because it was available
+over HTTPS (the jQuery CDN was not,) and it offered a better chance of
+hitting the cache lottery owing to the popularity of the Google CDN.
+The first issue is no longer valid and the second is far outweighed by
+being able to serve jQuery to Chinese users.</p>
+
+<p>While the jQuery CDN is a strong default solution your site or application may
+require a different configuration. Testing your site with services like
+<a href="https://www.webpagetest.org/">WebPageTest</a> and browser tools like
+<a href="https://developers.google.com/speed/pagespeed/insights/">PageSpeed Insights</a> will help you examine the real
+world performance of your site and can show where you can optimize your specific
+site or application.</p>
+
+<h3 id="google-universal-analytics-tracking-code">Google Universal Analytics Tracking Code</h3>
+
+<p>Finally, an optimized version of the Google Universal Analytics tracking code is
+included. Google recommends that this script be placed at the top of the page.
+Factors to consider: if you place this script at the top of the page, you’ll
+be able to count users who don’t fully load the page, and you’ll incur the max
+number of simultaneous connections of the browser.</p>
+
+<p>Further information:</p>
+
+<ul>
+  <li><a href="https://mathiasbynens.be/notes/async-analytics-snippet#universal-analytics">Optimizing the Google Universal Analytics
+Snippet</a></li>
+  <li><a href="https://developers.google.com/analytics/devguides/collection/analyticsjs/">Introduction to
+Analytics.js</a></li>
+  <li><a href="https://ga-dev-tools.appspot.com/">Google Analytics Demos &amp; Tools</a></li>
+</ul>
+
+<p><strong>N.B.</strong> The Google Universal Analytics snippet is included by default mainly
+because Google Analytics is <a href="https://trends.builtwith.com/analytics/Google-Analytics">currently one of the most popular tracking
+solutions</a> out there.
+However, its usage isn’t set in stone, and you SHOULD consider exploring the
+<a href="https://en.wikipedia.org/wiki/List_of_web_analytics_software">alternatives</a>
+and use whatever suits your needs best!</p>
+
+
+      
+      <div class="footer border-top border-gray-light mt-5 pt-3 text-right text-gray">
+        This site is open source. <a href="http://github.com/FundRequest/arkane-website/edit/gh-pages/doc/html.md">Improve this page</a>.
+      </div>
+      
+    </div>
+    <script src="/assets/javascript/anchor-js/anchor.min.js"></script>
+    <script>anchors.add();</script>
+  </body>
+</html>

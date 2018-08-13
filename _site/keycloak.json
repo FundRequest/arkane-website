@@ -1,0 +1,12 @@
+{
+  "clientId": "arkane",
+  "realm": "master",
+  "auth-server-url": "https://login-tst1.arkane.network/auth",
+  "ssl-required": "external",
+  "resource": "arkane",
+  "credentials": {
+    "secret": "6fd8360f-1113-4682-960d-533b137025ca"
+  },
+  "confidential-port": 0,
+  "policy-enforcer": {}
+}
