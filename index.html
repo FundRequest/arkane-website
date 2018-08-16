@@ -14,9 +14,14 @@ page: index
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
   <![endif]-->
   <!-- Add your site or application content here -->
-  <a class="keycloak-logged-in" href="#"><span id="keycloak-username">Anoniem</span></a>
-  <a class="keycloak-logged-in" id="keycloak-logout" href="#"><span>Logout</span></a>
-  <a class="keycloak-not-logged-in" id="keycloak-loginlink" href="#">Login in</a>
+  <div class="keycloak-logged-in">
+    <div><span id="keycloak-username">Anoniem</span></div>
+    <a id="keycloak-logout" href="#"><span>Logout</span></a>
+    <a id="keycloak-requestaccess" href="#"><span>Get access</span></a>
+  </div>
+  <div class="keycloak-not-logged-in">
+      <a id="keycloak-loginlink" href="#">Login in</a>
+  </div>
   {% include scripts.html %}
 </body>
 
