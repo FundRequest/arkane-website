@@ -1,0 +1,67 @@
+.link
+  cursor: pointer
+  text-transform: capitalize
+  color: $color-link-default
+  transition: color 300ms ease-out
+  &:hover,
+  &:active
+    text-decoration: underline
+    color: darken($color-link-default, 10%)
+
+@each $type, $color in $types
+  .link--#{$type}
+    color: $color
+    &:hover,
+    &:active
+      color: darken($color, 10%)
+
+.btn
+  cursor: pointer
+  text-align: center
+  width: 100%
+  border: 1px solid $color-link-default
+  font-size: $font-size-small
+  font-weight: $font-weight-btn
+  border-radius: $border-radius-small
+  margin-bottom: rem(20px)
+  color: $color-white
+  background-color: $color-link-default
+  line-height: rem(20px)
+  padding: rem(7px 20px)
+  white-space: nowrap
+  transition: background-color 300ms ease-out
+
+.btn
+  &:hover,
+  &:active
+    background-color: darken($color-link-default, 10%)
+  &.btn--outline
+    background-color: transparent
+    color: $color-link-default
+    &:hover,
+    &:active
+      color: darken($color-link-default, 10%)
+      border-color: darken($color-link-default, 10%)
+      background-color: rgba($color-link-default, .1)
+
+@each $type, $color in $types
+  .btn--#{$type}
+    background-color: $color
+    border-color: $color
+    &:hover,
+    &:active
+      background-color: darken($color, 10%)
+
+    &.btn--outline
+      background-color: transparent
+      color: $color
+      &:hover,
+      &:active
+        color: darken($color, 10%)
+        border-color: darken($color, 10%)
+        background-color: rgba($color, .1)
+
+.btn:disabled
+    cursor: not-allowed
+    background-color: $color-muted
+    border-color: $color-muted

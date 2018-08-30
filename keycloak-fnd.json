@@ -1,8 +1,0 @@
-{
-  "realm": "fundrequest",
-  "realm-public-key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnuWjU9JCfyHsqj5fdcLsDljNL3Dcy0HrAUe9nqpSoX4GXh1mlr1q3HF35NEoUx5MsDvQfWunFe/INGHxpIZLNccjLKXvEJInKtW356qJq7DQjvbdNfBXfE2V8xhANEl/lOq+qY/c1bf0s9/Yva5hHwEfJJDOX1Ugg8SWdfwJBd3wbPAoF2eVUxIg0/4UVZ7pp5vVhjLZBHFui8zpxEX4cw7Ps3nT27ewmJZsRZE0b0XADUw932tWLn05npBouGA/Hahr7cOwavT+8elLyDwRFGkReCwpNL+85nMmEMP0d93w3p6kzREhiAF7bJeEDmMiQ0KDxpOQzZeEr+f66PLBzwIDAQAB",
-  "auth-server-url": "https://staging-sso.fundrequest.io/auth",
-  "ssl-required": "external",
-  "resource": "fundrequest_dev",
-  "public-client": true
-}

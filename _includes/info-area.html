@@ -1,0 +1,34 @@
+<section class="info-area" id="info-area">
+  <div class="container">
+    <header class="info-area__header">
+      <h1 class="info-area__heading">
+        {{include.title}}
+      </h1>
+    </header>
+    <div class="info-area__infographic">
+
+      <div class="info-area__arkane">
+        <svg class="icon icon-arkane"><use xlink:href="#icon-arkane-a"></use></svg>
+      </div>
+      <div class="info-area__strokes">
+        <div class="info-area__strokes__top">
+        </div>
+        <div class="info-area__strokes__bottom">
+          <div class="info-area__stroke-left"></div>
+          <div class="info-area__stroke-middle"></div>
+          <div class="info-area__stroke-right"></div>
+        </div>
+      </div>
+      <div class="info-area__items">
+        {% capture icon %}
+          <svg class="icon icon-dummy"><use xlink:href="#icon-dummy"></use></svg>
+        {% endcapture %}
+        {% include fragments/info-item.html content="Easy access to all your crypto wallets" icon=icon %}
+        {% include fragments/info-item.html content="Simple but secure" icon=icon %}
+        {% include fragments/info-item.html content="Never lose access" icon=icon %}
+        {% include fragments/info-item.html content="Connect to all apps you need" icon=icon %}
+        {% include fragments/info-item.html content="Ready to use, set and integrate" icon=icon %}
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,81 @@
+.info-area
+  padding: rem(32px) 0
+  background-color: $color-white
+
+  &__infographic
+    .icon-arkane
+      fill: $color-brand-dark
+      width: rem(80px)
+      height: rem(60px)
+
+  &__arkane
+    display: flex
+    justify-content: center
+
+  &__strokes
+    margin-bottom: rem(16px)
+
+    &__top, &__bottom
+      display: flex
+      justify-items: center
+
+    &__top
+      height: rem(16px)
+      width: 100%
+      &::after, &::before
+        content: ''
+        flex: 1
+      &::before
+        border-right: 2px dashed $color-brand-dark
+
+  &__stroke
+    &-left, &-right
+      flex: 8
+      @include media(tablet)
+        flex: 5
+      @include media(desktop)
+        flex: 2
+    &-middle
+      height: rem(16px)
+      border: 2px dashed $color-brand-dark
+      border-bottom: 0 none
+      flex: 16
+      @include media(tablet)
+        flex: 20
+      @include media(desktop)
+        flex: 16
+
+  &__items
+    display: flex
+    justify-content: center
+    justify-items: center
+    flex-wrap: wrap
+    @include media(desktop)
+      flex-wrap: nowrap
+
+  &__item
+    text-align: center
+    padding: 0 rem(12px)
+    width: 50%
+    margin-bottom: rem(24px)
+    @include media(tablet)
+      padding: 0 rem(16px)
+      width: 33.333333%
+    @include media(desktop)
+      padding: 0 rem(32px)
+      width: auto
+      flex: 1
+
+    &__icon
+      margin-bottom: rem(16px)
+      .icon
+        fill: transparent
+        stroke: $color-brand-dark
+        stroke-width: 24px
+        height: rem(60px)
+        width: rem(60px)
+
+    &__text
+      color: $color-brand-dark
+      font-size: $font-size-small
+      font-weight: $font-weight-500

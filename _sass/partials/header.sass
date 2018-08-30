@@ -1,0 +1,62 @@
+.header
+  background: $color-white
+  position: relative
+  overflow: hidden
+
+.navigation
+  display: flex
+  justify-content: space-between
+  align-items: center
+  height: rem(48px)
+  margin-top: rem(24px)
+
+.logo
+  display: block
+  height: rem(42px)
+  img
+    height: 100%
+    width: auto
+
+.nav
+  &__list
+    margin: 0
+    list-style: none
+    display: flex
+    flex-direction: column
+    @include media(tablet)
+      flex-direction: row
+      justify-content: flex-end
+
+    &-item
+      display: flex
+      margin: 0 rem(8px)
+      .btn
+        margin: 0
+      .link
+        justify-content: space-between
+        line-height: rem(32px)
+        padding: 0 rem(16px)
+
+.intro
+  grid-column: col-start 1 / span 12
+  @include media(tablet)
+    grid-column: col-start 1 / span 6
+  @include media(desktop)
+    grid-column: col-start 1 / span 4
+    margin: rem(40px) 0
+  @include media(wide)
+    grid-column: col-start 1 / span 3
+
+.description
+  text-align: justify
+  margin-bottom: rem(40px)
+
+.ctas
+  display: flex
+  > *
+    flex-basis: 50%
+    &:first-child
+      margin-right: $grid-gap / 2
+    &:last-child
+      margin-left: $grid-gap / 2
+

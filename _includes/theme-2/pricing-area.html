@@ -1,0 +1,17 @@
+<section class="pricing-area" id="pricing-area">
+  <div class="container">
+    <header class="pricing-area__header">
+      <h1 class="pricing-area__heading">
+        Choose your plan
+      </h1>
+    </header>
+    <div class="pricing-area__subscriptions">
+      {% include fragments/pricing-block-free.html %}
+      {% include fragments/pricing-block-premium.html cta='secondary' %}
+      {% include fragments/pricing-block-ultimate.html %}
+    </div>
+    <p class="pricing-area__footer">
+      * You can try PREMIUM for free during 3 Months!
+    </p>
+  </div>
+</section>
