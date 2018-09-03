@@ -1,0 +1,21 @@
+body
+  background-color: transparent
+
+  @include media(tablet)
+    &::after
+      content: ''
+      position: absolute
+      display: block
+      left: 0
+      right: 0
+      top: 0
+      margin: 0 auto
+      width: 100%
+      height: rem(1178px)
+      max-width: rem(1680px)
+      background-image: url(../img/bg-homepage.png)
+      background-size: cover
+      background-position: top center
+      background-repeat: no-repeat
+      z-index: -1
+

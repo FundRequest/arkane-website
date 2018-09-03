@@ -2,15 +2,19 @@
 
 .newsletter
   text-align: center
+  background-color: $color-bg-grey
+  @include media(tablet)
+    background-color: transparent
 
   &__heading
     font-weight: $font-weight-normal
 
+  &__heading,
   &__subheading
-    color: $color-brand-dark
+    color: $color-text
 
   .control__label
     display: none
 
   .control__input
-    border-color: $color-brand-dark
+    border-color: $color-text

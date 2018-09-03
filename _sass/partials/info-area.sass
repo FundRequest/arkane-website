@@ -1,6 +1,5 @@
 .info-area
   padding: rem(32px) 0
-  background-color: $color-white
 
   &__infographic
     .icon-arkane
@@ -13,7 +12,9 @@
     justify-content: center
 
   &__strokes
-    margin-bottom: rem(16px)
+    margin-bottom: rem(33px)
+    @include media(tablet)
+      margin-bottom: rem(16px)
 
     &__top, &__bottom
       display: flex
@@ -30,7 +31,7 @@
 
   &__stroke
     &-left, &-right
-      flex: 8
+      flex: 1
       @include media(tablet)
         flex: 5
       @include media(desktop)
@@ -39,7 +40,7 @@
       height: rem(16px)
       border: 2px dashed $color-brand-dark
       border-bottom: 0 none
-      flex: 16
+      flex: 8
       @include media(tablet)
         flex: 20
       @include media(desktop)
@@ -47,9 +48,11 @@
 
   &__items
     display: flex
-    justify-content: center
+    justify-content: flex-start
     justify-items: center
     flex-wrap: wrap
+    @include media(tablet)
+      justify-content: center
     @include media(desktop)
       flex-wrap: nowrap
 
@@ -57,9 +60,11 @@
     text-align: center
     padding: 0 rem(12px)
     width: 50%
-    margin-bottom: rem(24px)
+    margin-bottom: rem(40px)
+
     @include media(tablet)
       padding: 0 rem(16px)
+      margin-bottom: rem(24px)
       width: 33.333333%
     @include media(desktop)
       padding: 0 rem(32px)
@@ -69,9 +74,9 @@
     &__icon
       margin-bottom: rem(16px)
       .icon
-        fill: transparent
+        fill: $color-brand-dark
         stroke: $color-brand-dark
-        stroke-width: 24px
+        stroke-width: 1px
         height: rem(60px)
         width: rem(60px)
 

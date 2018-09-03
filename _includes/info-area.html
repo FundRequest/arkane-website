@@ -6,7 +6,6 @@
       </h1>
     </header>
     <div class="info-area__infographic">
-
       <div class="info-area__arkane">
         <svg class="icon icon-arkane"><use xlink:href="#icon-arkane-a"></use></svg>
       </div>
@@ -20,14 +19,11 @@
         </div>
       </div>
       <div class="info-area__items">
-        {% capture icon %}
-          <svg class="icon icon-dummy"><use xlink:href="#icon-dummy"></use></svg>
-        {% endcapture %}
-        {% include fragments/info-item.html content="Easy access to all your crypto wallets" icon=icon %}
-        {% include fragments/info-item.html content="Simple but secure" icon=icon %}
-        {% include fragments/info-item.html content="Never lose access" icon=icon %}
-        {% include fragments/info-item.html content="Connect to all apps you need" icon=icon %}
-        {% include fragments/info-item.html content="Ready to use, set and integrate" icon=icon %}
+        {% include fragments/info-item.html content="Easy access" icon="wallets" %}
+        {% include fragments/info-item.html content="Secure" icon="secure" %}
+        {% include fragments/info-item.html content="Recoverable" icon="unlock" %}
+        {% include fragments/info-item.html content="Network of Apps" icon="apps" %}
+        {% include fragments/info-item.html content="Activity tracker" icon="activity" %}
       </div>
     </div>
   </div>

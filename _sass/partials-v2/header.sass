@@ -5,8 +5,17 @@
   font-weight: $font-weight-normal
 
 .header
+  margin-bottom: rem(40px)
+  @include media(tablet)
+    margin-bottom: rem(160px)
+
   &__cta
-    display: none
+    color: $color-text
+    display: block
+    line-height: rem(32px)
+    .link
+      color: $color-text
+      text-decoration: underline
 
   &__next
     display: none

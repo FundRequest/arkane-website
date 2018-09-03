@@ -1,7 +1,21 @@
 .header
-  background: $color-white
   position: relative
   overflow: hidden
+
+  &__cta__content
+    line-height: rem(36px)
+
+  &__image
+    width: 100%
+    max-width: rem(280px)
+    margin: 0 auto
+    @include media(tablet)
+      display: none
+
+  .icon-chrome
+    margin-right: rem(16px)
+    height: rem(36px)
+    width: rem(36px)
 
 .navigation
   display: flex
@@ -10,12 +24,21 @@
   height: rem(48px)
   margin-top: rem(24px)
 
-.logo
+.logo, .logo__small
   display: block
   height: rem(42px)
   img
     height: 100%
     width: auto
+
+.logo
+  display: none
+  @include media(tablet)
+    display: block
+
+.logo__small
+  @include media(tablet)
+    display: none
 
 .nav
   &__list
@@ -37,26 +60,40 @@
         line-height: rem(32px)
         padding: 0 rem(16px)
 
+  .btn--outline
+    border-width: 0
+    @include media(tablet)
+      border-width: 1px
+
 .intro
   grid-column: col-start 1 / span 12
   @include media(tablet)
-    grid-column: col-start 1 / span 6
+    grid-column: col-start 1 / span 5
   @include media(desktop)
     grid-column: col-start 1 / span 4
-    margin: rem(40px) 0
+    margin: rem(40px) 0 0 0
   @include media(wide)
-    grid-column: col-start 1 / span 3
+    grid-column: col-start 1 / span 5
 
 .description
   text-align: justify
   margin-bottom: rem(40px)
 
 .ctas
-  display: flex
   > *
-    flex-basis: 50%
-    &:first-child
-      margin-right: $grid-gap / 2
-    &:last-child
-      margin-left: $grid-gap / 2
+    display: block
+    margin-bottom: rem(20px)
 
+  @include media(tablet)
+    display: flex
+    justify-content: flex-start
+    > *
+      width: auto
+      padding-left: rem(32px)
+      padding-right: rem(32px)
+      margin-bottom: rem(16px)
+
+      &:first-child
+        margin-right: $grid-gap
+      &:last-child
+        margin-left: $grid-gap

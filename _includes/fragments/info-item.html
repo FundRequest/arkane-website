@@ -1,6 +1,6 @@
 <div class="info-area__item">
   <div class="info-area__item__icon">
-    {{ include.icon }}
+    <svg class="icon icon-{{ include.icon }}"><use xlink:href="#icon-{{ include.icon }}"></use></svg>
   </div>
   <div class="info-area__item__text">
     {{ include.content }}

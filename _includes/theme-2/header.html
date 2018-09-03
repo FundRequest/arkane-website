@@ -2,11 +2,15 @@
 <header class="header" id="header">
   <div class="container">
     {% include fragments/navigation.html %}
+    <img class="header__image" src="{{site.imgurl}}/visual-arkane.png" alt="arkane crypto wallet"/>
     {% include fragments/intro.html cta='secondary' %}
 
     <div class="header__cta">
       <div class="header__cta__content">
-        <a class="link" href="#">Chrome Extension</a><br />
+        <svg class="icon icon-chrome">
+          <use xlink:href="#icon-chrome"></use>
+        </svg>
+        <a class="link" href="#">Chrome Extension</a>
         <span>coming soon!</span>
       </div>
     </div>

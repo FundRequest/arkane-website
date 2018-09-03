@@ -1,6 +1,10 @@
 @import ../partials/info-area
 
 .info-area
+  background-color: $color-bg-grey
+  @include media(tablet)
+    background-color: transparent
+
   &__header
     text-align: center
     color: $color-text
