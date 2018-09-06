@@ -1,0 +1,90 @@
+.nav-mobile
+  display: block
+  top: 0
+  bottom: 0
+  right: 0
+  left: 0
+  position: fixed
+  z-index: -1
+
+  &.open
+    z-index: 998
+
+  @include media(tablet)
+    display: none
+
+  &__button
+    cursor: pointer
+    border-radius: 100%
+    width: rem(40px)
+    height: rem(40px)
+    background-color: $color-white
+    box-shadow: $box-shadow-floating
+    display: flex
+    justify-content: center
+    align-items: center
+    position: fixed
+    bottom: rem(10px)
+    right: rem(10px)
+    z-index: 999
+
+  &__circle
+    position: fixed
+    border-radius: 50%
+    width: 0
+    height: 0
+    bottom: rem(30px)
+    right: rem(30px)
+    background: rgba($color-white, .97)
+    opacity: 1
+    transition: all 300ms cubic-bezier(0.000, 0.995, 0.990, 1.000)
+    z-index: 997
+
+    .open + &
+      width: rem(1536px)
+      height: rem(1536px)
+      bottom: rem(-738px)
+      right: rem(-738px)
+
+  &__nav
+    position: absolute
+    top: 0
+    bottom: 0
+    right: 0
+    left: 0
+    z-index: 1
+
+  &__list
+    list-style: none
+    padding: 0
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    font-size: 0
+    transition: all 70ms cubic-bezier(0.000, 0.995, 0.990, 1.000)
+
+  &__list-item
+    width: 100%
+    position: absolute
+    @for $i from 1 through 7
+      &:nth-child(#{$i})
+        bottom: rem(($i * 40px))
+
+    .open &
+      font-size: $font-size-big
+      opacity: 1
+      transition: all 150ms cubic-bezier(0.000, 0.995, 0.990, 1.000)
+
+      @for $i from 1 through 7
+        &:nth-child(#{$i})
+          bottom: rem(($i * 40px + 32px))
+          transition-delay: ($i - 1) * 0.1s
+
+    .link
+      display: block
+      color: $color-text
+      text-decoration: none
+      line-height: rem(40px)
+      padding: 0 rem(20px)

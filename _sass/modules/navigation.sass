@@ -1,0 +1,49 @@
+.navigation
+  display: none
+  @include media(tablet)
+    display: flex
+    justify-content: space-between
+    align-items: center
+    height: rem(48px)
+    margin-top: rem(24px)
+
+.logo, .logo__small
+  display: block
+  height: rem(42px)
+  img
+    height: 100%
+    width: auto
+
+.logo
+  display: none
+  @include media(tablet)
+    display: block
+
+.logo__small
+  @include media(tablet)
+    display: none
+
+.nav
+  &__list
+    margin: 0
+    list-style: none
+    display: flex
+    flex-direction: column
+    @include media(tablet)
+      flex-direction: row
+      justify-content: flex-end
+
+    &-item
+      display: flex
+      margin: 0 rem(8px)
+      .btn
+        margin: 0
+      .link
+        justify-content: space-between
+        line-height: rem(32px)
+        padding: 0 rem(16px)
+
+  .btn--outline
+    border-width: 0
+    @include media(tablet)
+      border-width: 1px
