@@ -6,7 +6,7 @@ page: index
 <html class="no-js" lang="en">
 
 <head>
-  {% include head.html theme=2 %}
+  {% include head.html theme=1 %}
 </head>
 
 <body>
@@ -15,15 +15,13 @@ page: index
   your browser</a> to improve your experience and security.</p>
 <![endif]-->
 
-{% include theme-2/header.html %}
-<!--{% include video-area.html %}-->
-{% include info-area.html title='Why Arkane' %}
-<!--{% include theme-2/pricing-area.html %}-->
-{% include rewards-area.html %}
-{% include keep-in-touch-area.html cta='brand-light' %}
+{% include theme-1/header.html %}
+{% include video-area.html %}
+{% include info-area.html title='Why Arkane is a good solution?' %}
+{% include theme-1/pricing-area.html %}
+{% include keep-in-touch-area.html cta='success' %}
 {% include footer.html %}
 {% include scripts.html %}
-
 </body>
 
 </html>

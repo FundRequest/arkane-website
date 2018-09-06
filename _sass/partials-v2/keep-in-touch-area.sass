@@ -2,9 +2,7 @@
 
 .newsletter
   text-align: center
-  background-color: $color-bg-grey
-  @include media(tablet)
-    background-color: transparent
+  background-color: $color-lightest-grey
 
   &__heading
     font-weight: $font-weight-normal
@@ -17,4 +15,10 @@
     display: none
 
   .control__input
+    margin: 0 auto
     border-color: $color-text
+    max-width: rem(256px)
+    line-height: rem(32px)
+    height: rem(32px)
+    &::placeholder
+      opacity: .25

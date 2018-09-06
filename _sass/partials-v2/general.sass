@@ -1,8 +1,10 @@
 body
   background-color: transparent
 
-  @include media(tablet)
-    &::after
+  .bg, .bg-big
+    display: none
+    @include media(tablet)
+      opacity: 0
       content: ''
       position: absolute
       display: block
@@ -11,11 +13,35 @@ body
       top: 0
       margin: 0 auto
       width: 100%
-      height: rem(1178px)
-      max-width: rem(1680px)
-      background-image: url(../img/bg-homepage.png)
+      height: rem(1180px)
+      max-width: rem(2530px)
       background-size: cover
       background-position: top center
       background-repeat: no-repeat
       z-index: -1
 
+  .bg
+    @include media(tablet)
+      opacity: 1
+      background-image: url(../img/bg-homepage.png)
+
+  .bg.fadeOut
+    @include media(tablet)
+      animation: fadeout 2s forwards
+      animation-delay: 1s
+
+  .bg-big.fadeIn
+    @include media(tablet)
+      animation: fadein 2s forwards
+
+@keyframes fadein
+  from
+    opacity: 0
+  to
+    opacity: 1
+
+@keyframes fadeout
+  from
+    opacity: 1
+  to
+    opacity: 0
