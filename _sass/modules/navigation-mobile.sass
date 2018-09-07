@@ -61,6 +61,8 @@ $nav-mobile-transition: cubic-bezier(0.000, 0.995, 0.990, 1.000)
     opacity: 1
     transition: all 300ms $nav-mobile-transition
     z-index: 997
+    @include media(tablet)
+      display: none
 
     .open + &
       width: rem(1536px)
