@@ -1,0 +1,11 @@
+{% include fragments/symbols.html %}
+<header class="header header--dev" id="header">
+  <div class="container">
+    {% include fragments/navigation.html %}
+    <div class="header__image__container">
+      <div class="header__image__bg" style="background-image: url({{site.imgurl}}/visual-dev.png);"></div>
+      <img class="header__image" src="{{site.imgurl}}/visual-dev.png" alt="arkane crypto wallet"/>
+    </div>
+    {% include build-on-arkane/fragments/intro.html %}
+  </div>
+</header>

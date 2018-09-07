@@ -17,14 +17,13 @@
   }
 
   function initToggle() {
-    var event = 'ontouchstart' in document.documentElement ? 'touchstart' : click;
+    var event = 'ontouchstart' in document.documentElement ? 'touchstart' : 'click';
 
     $('[data-toggle]').on(event, function() {
       var $toggleButton = $(this);
       var $body = $('body');
       var isOpen = $toggleButton.hasClass('open');
       var $toggleItem = $($toggleButton.data('toggle'));
-      console.log($toggleItem);
       if(isOpen) {
         $body.css('overflow', 'auto');
         $toggleButton.removeClass('open');

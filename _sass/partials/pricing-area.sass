@@ -1,5 +1,27 @@
 .pricing-area
   padding: rem(60px) 0
+  background: $color-white-smoke
+
+  &__heading
+    margin-bottom: rem(48px)
+    font-size: rem(28px)
+    font-weight: $font-weight-normal
+    text-align: center
+
+  &__subscription
+    background-color: $color-white
+    &--premium
+      box-shadow: 0 rem(2px) rem(8px) 0 rgba(0, 0, 0, 0.4)
+    &--ultimate
+      box-shadow: 0 rem(1px) rem(4px) 0 rgba(0, 0, 0, 0.3)
+
+  &__label
+    background-color: $color-brand-light
+
+  &__footer
+    text-align: center
+    font-size: $font-size-small
+    color: $color-brand-light
 
   &__subheading
     font-size: $font-size-regular

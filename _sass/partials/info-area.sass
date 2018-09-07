@@ -1,5 +1,16 @@
 .info-area
   padding: rem(32px) 0
+  background-color: $color-bg-grey
+  @include media(tablet)
+    background-color: transparent
+
+  &__header
+    text-align: center
+    color: $color-text
+
+  &__heading
+    font-weight: $font-weight-normal
+    font-size: rem(28px)
 
   &__infographic
     margin-bottom: rem(88px)
@@ -11,6 +22,7 @@
   &__arkane
     display: flex
     justify-content: center
+    margin-bottom: rem(24px)
 
   &__strokes
     margin-bottom: rem(33px)

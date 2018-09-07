@@ -1,9 +1,13 @@
 .header
   position: relative
   overflow: hidden
+  padding-top: rem(50px)
+  @include media(tablet)
+    padding-top: 0
+    margin-bottom: rem(192px)
 
-  &__cta__content
-    line-height: rem(36px)
+  &--dev
+    margin-bottom: rem(80px)
 
   &__image
     width: 100%
@@ -12,24 +16,94 @@
     @include media(tablet)
       display: none
 
+    &__bg
+      display: none
+      @include media(tablet)
+        margin: rem(48px)
+        position: absolute
+        display: block
+        left: rem(20px)
+        right: rem(48px)
+        top: 0
+        bottom: 0
+        background-size: contain
+        background-position: center center
+        background-repeat: no-repeat
+
+    &__container
+      text-align: center
+      @include media(tablet)
+        position: relative
+        height: 100%
+        grid-column: col-start 1 / span 6
+        &::before, &::after
+          content: ''
+          position: absolute
+          left: 0
+          right: 0
+          top: 0
+          bottom: 0
+        &::before
+          background: linear-gradient(to right, rgba(#b086b1, 1) 0%, rgba(0, 0, 0, 0) 100%)
+          z-index: 0
+        &::after
+          background: #b086b1
+          width: 50vw
+          transform: translateX(-100%)
+          z-index: -1
+
+        > img
+          height: 100%
+
   .icon-chrome
     margin-right: rem(16px)
     height: rem(36px)
     width: rem(36px)
 
+  &__cta
+    color: $color-text
+    display: block
+    line-height: rem(32px)
+    &__content
+      line-height: rem(36px)
+    .link
+      color: $color-text
+      text-decoration: underline
+
+  &__next
+    display: none
+
 .intro
-  grid-column: col-start 1 / span 12
+  grid-column-start: 1
+  grid-column-end: span 12
   @include media(tablet)
-    grid-column: col-start 1 / span 5
+    grid-column-end: span 5
   @include media(desktop)
-    grid-column: col-start 1 / span 4
+    grid-column-end: span 4
     margin: rem(40px) 0 0 0
   @include media(wide)
-    grid-column: col-start 1 / span 5
+    grid-column-end: span 5
 
-.description
-  text-align: justify
-  margin-bottom: rem(40px)
+  &__title
+    color: $color-text
+    font-weight: $font-weight-normal
+
+  &__description
+    text-align: justify
+    margin-bottom: rem(40px)
+
+  &--dev
+    @include media(tablet)
+      text-align: right
+      grid-column-start: 7
+      margin: rem(180px) 0
+
+      .icon-chrome
+        float: right
+        margin-left: rem(16px)
+        margin-right: 0
+      .intro__description
+        text-align: right
 
 .ctas
   > *
@@ -39,6 +113,8 @@
   @include media(tablet)
     display: flex
     justify-content: flex-start
+    &--right
+      justify-content: flex-end
     > *
       width: auto
       padding-left: rem(32px)
