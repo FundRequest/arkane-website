@@ -6,16 +6,16 @@
   </p>
   <div class="ctas">
     <a href="#" class="btn">Get Invited</a>
-    <a href="/build-on-arkane.html" class="btn btn--secondary">Build on Arkane</a>
+    <a href="{{ '/build-on-arkane.html' | prepend: site.pagesurl }}" class="btn btn--secondary">Build on Arkane</a>
   </div>
 
   <div class="header__cta">
     <div class="header__cta__content">
-      <svg class="icon icon-chrome">
-        <use xlink:href="#icon-chrome"></use>
-      </svg>
-      <span>Chrome Extension</span>
-      <span>coming soon!</span>
+      {% include fragments/chrome-svg.html %}
+      <div class="header__cta__text">
+        <span>Chrome Extension</span>
+        <span>coming soon!</span>
+      </div>
     </div>
   </div>
 

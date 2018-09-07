@@ -36,12 +36,21 @@
     &-item
       display: flex
       margin: 0 rem(8px)
+      font-weight: $font-weight-btn
       .btn
         margin: 0
       .link
         justify-content: space-between
         line-height: rem(32px)
-        padding: 0 rem(16px)
+        margin: 0 rem(16px)
+        border-bottom: 2px solid transparent
+        transition: border-bottom-color 200ms ease-out
+        &:hover, &:active
+          text-decoration: none
+
+        &:hover, &:active,
+        &--active
+          border-bottom: 2px solid $color-brand-light
 
   .btn--outline
     border-width: 0

@@ -1,15 +1,17 @@
 .api-area
-  padding: rem(96px) 0 rem(120px)
-  background-color: $color-bg-grey
-  background-image: url(../img/bg-api.png)
+  padding: rem(60px) 0
   background-size: cover
+  background-color: $color-white
   background-position: center center
+  @include media(tablet)
+    background-color: $color-bg-grey
+    background-image: url(../img/bg-api.png)
 
   &__header
     text-align: center
 
   &__heading
-    font-size: rem(26px)
+    font-size: $font-size-heading-h1
     font-weight: $font-weight-normal
     margin: 0 0 rem(32px) 0
 
@@ -20,8 +22,10 @@
     font-size: $font-size-big
     text-align: justify
     grid-column-start: 1
-    grid-column-end: 12
+    grid-column-end: span 12
+    order: 1
     @include media(tablet)
+      order: 0
       grid-column: col-start 1 / span 6
     @include media(desktop)
       grid-column: col-start 1 / span 5
@@ -34,7 +38,7 @@
   &__image
     position: relative
     grid-column-start: 1
-    grid-column-end: 12
+    grid-column-end: span 12
     @include media(tablet)
       grid-column: col-start 7 / span 6
 

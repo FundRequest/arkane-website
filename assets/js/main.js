@@ -16,42 +16,22 @@
     });
   }
 
-  function initToggle() {
+  function initMobileMenu() {
     var event = 'ontouchstart' in document.documentElement ? 'touchstart' : 'click';
 
-    $('[data-toggle]').on(event, function() {
-      var $toggleButton = $(this);
+    $('.nav-mobile__button').on(event, function() {
       var $body = $('body');
-      var isOpen = $toggleButton.hasClass('open');
-      var $toggleItem = $($toggleButton.data('toggle'));
+      var isOpen = $body.hasClass('nav-mobile-is-open');
       if(isOpen) {
-        $body.css('overflow', 'auto');
-        $toggleButton.removeClass('open');
-        if($toggleItem.length > 0) {
-          $toggleItem.removeClass('open');
-        }
+        $body.removeClass('nav-mobile-is-open');
       } else {
-        $body.css('overflow', 'hidden');
-        $toggleButton.addClass('open');
-        if($toggleItem.length > 0) {
-          $toggleItem.addClass('open');
-        }
+        $body.addClass('nav-mobile-is-open');
       }
     });
   }
 
-  function openMenu(){
-    $('div.circle').addClass('expand');
-    $('.menu li').addClass('animate');
-  }
-
-  function closeMenu(){
-    $('div.circle').removeClass('expand');
-    $('.menu li').removeClass('animate');
-  }
-
   $(function() {
     replacePageBg();
-    initToggle();
+    initMobileMenu();
   });
 })(window, jQuery);

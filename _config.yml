@@ -29,7 +29,7 @@ exclude:
   - package-lock.json
   - README.md
 
-baseurl: "" # the subpath of your site, e.g. /blog/
+baseurl: "/" # the subpath of your site, e.g. /blog/
 pagesurl: "/pages"
 vendorsurl: "/assets/vendors"
 imgurl: "/assets/img"

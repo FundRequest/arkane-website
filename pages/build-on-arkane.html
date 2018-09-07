@@ -1,6 +1,6 @@
 ---
-title: Next generation blockchain wallet provider
-page: index
+title: Build on Arkane
+page: build-on-arkane
 ---
 <!doctype html>
 <html class="no-js" lang="en">
@@ -10,25 +10,20 @@ page: index
 </head>
 
 <body>
-
 <!--[if lte IE 9]>
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade
   your browser</a> to improve your experience and security.</p>
 <![endif]-->
 
 {% include fragments/navigation-mobile.html %}
-<div class="bg" data-page-bg="{{site.imgurl}}/bg-homepage-large.png"></div>
-<div class="bg-big" data-page-bg-big="true"></div>
-
 <div class="page-wrapper">
-  {% include homepage/header.html %}
-  {% include homepage/info-area.html title='Why Arkane' %}
-  {% include homepage/rewards-area.html %}
-  {% include homepage/keep-in-touch-area.html cta='brand-light' %}
+  {% include build-on-arkane/header.html %}
+  {% include build-on-arkane/info-area.html %}
+  {% include build-on-arkane/api-area.html %}
+  {% include build-on-arkane/request-area.html %}
   {% include footer.html %}
   {% include scripts.html %}
 </div>
-
 </body>
 
 </html>

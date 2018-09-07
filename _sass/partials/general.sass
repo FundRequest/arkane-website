@@ -16,9 +16,11 @@ body
       height: rem(1180px)
       max-width: rem(2530px)
       background-size: cover
-      background-position: top center
+      background-position: unquote("calc(50% + 52px)") top
       background-repeat: no-repeat
       z-index: -1
+    @include media(tablet-ls)
+      background-position: unquote("calc(50% + 132px)") top
 
   .bg
     @include media(tablet)

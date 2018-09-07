@@ -8,6 +8,11 @@
 
   &--dev
     margin-bottom: rem(80px)
+    .header__image
+      &__bg
+        @include media(tablet)
+          opacity: 1
+          background-image: url(../img/visual-dev-blur.png)
 
   &__image
     width: 100%
@@ -16,10 +21,9 @@
     @include media(tablet)
       display: none
 
-    &__bg
+    &__bg, &__bg-big
       display: none
       @include media(tablet)
-        margin: rem(48px)
         position: absolute
         display: block
         left: rem(20px)
@@ -30,12 +34,25 @@
         background-position: center center
         background-repeat: no-repeat
 
-    &__container
-      text-align: center
+    &__bg.fadeOut
       @include media(tablet)
-        position: relative
-        height: 100%
-        grid-column: col-start 1 / span 6
+        animation: fadeout 2s forwards
+        animation-delay: 1s
+
+    &__bg-big.fadeIn
+      @include media(tablet)
+        animation: fadein 2s forwards
+
+    &__bg-gradient
+      display: none
+      @include media(tablet)
+        display: block
+        position: absolute
+        left: 0
+        right: 0
+        top: 0
+        bottom: 0
+        background-image: linear-gradient(to right, rgba(#b186b1, 1) 0%, rgba(#ffffff, 0) 100%)
         &::before, &::after
           content: ''
           position: absolute
@@ -43,13 +60,34 @@
           right: 0
           top: 0
           bottom: 0
+          background-repeat: no-repeat
+          background-size: contain
         &::before
-          background: linear-gradient(to right, rgba(#b086b1, 1) 0%, rgba(0, 0, 0, 0) 100%)
-          z-index: 0
+          background-position: right -1px
+          background-image: url(../img/bg-dev-top.png)
         &::after
-          background: #b086b1
+          background-position: right unquote("calc(100% + 1px)")
+          background-image: url(../img/bg-dev-bottom.png)
+
+
+    &__container
+      text-align: center
+      padding: 0 rem(40px)
+      @include media(tablet)
+        padding: 0
+        position: relative
+        height: 100%
+        grid-column: col-start 1 / span 6
+        &::after
+          content: ''
+          position: absolute
+          left: 0
+          right: 0
+          top: 0
+          bottom: 0
+          background: #b186b1
           width: 50vw
-          transform: translateX(-100%)
+          transform: translateX(-99.9%)
           z-index: -1
 
         > img
@@ -59,13 +97,21 @@
     margin-right: rem(16px)
     height: rem(36px)
     width: rem(36px)
+    @include media(tablet)
+      height: rem(50px)
+      width: rem(50px)
 
   &__cta
     color: $color-text
     display: block
     line-height: rem(32px)
+    margin-bottom: rem(32px)
     &__content
       line-height: rem(36px)
+      @include media(tablet)
+        line-height: rem(50px)
+    &__text
+      display: inline-block
     .link
       color: $color-text
       text-decoration: underline
@@ -77,6 +123,8 @@
   grid-column-start: 1
   grid-column-end: span 12
   @include media(tablet)
+    grid-column-end: span 6
+  @include media(tablet-ls)
     grid-column-end: span 5
   @include media(desktop)
     grid-column-end: span 4
@@ -91,24 +139,33 @@
   &__description
     text-align: justify
     margin-bottom: rem(40px)
+    font-size: $font-size-big
 
   &--dev
     @include media(tablet)
       text-align: right
       grid-column-start: 7
-      margin: rem(180px) 0
-
+      margin: rem(60px) 0
       .icon-chrome
         float: right
         margin-left: rem(16px)
         margin-right: 0
       .intro__description
         text-align: right
+    @include media(tablet-ls)
+      margin: rem(100px) 0
+    @include media(desktop)
+      margin: rem(120px) 0
+    @include media(wide)
+      margin: rem(180px) 0
 
 .ctas
+  @include media(tablet-ls)
+    margin-bottom: rem(44px)
   > *
     display: block
     margin-bottom: rem(20px)
+    min-width: rem(160px)
 
   @include media(tablet)
     display: flex

@@ -1,9 +1,9 @@
 .rewards-area
-  padding: rem(96px) 0 rem(120px)
-  background-image: url(../img/bg-gems-white.png)
+  padding: rem(60px) 0
   background-size: cover
   background-position: center center
   @include media(tablet)
+    background-color: $color-bg-grey
     background-image: url(../img/bg-gems.png)
 
 
@@ -21,10 +21,11 @@
     text-align: center
 
   &__heading
-    font-size: rem(26px)
+    font-size: $font-size-heading-h1
     font-weight: $font-weight-normal
     margin: 0 0 rem(32px) 0
 
   &__subheading
     font-size: $font-size-big
     font-weight: $font-weight-normal
+    margin-bottom: 0
