@@ -1,0 +1,58 @@
+.video-area
+  padding: rem(32px) 0
+  background-color: $color-white-smoke
+
+
+  &__header
+    display: none
+    margin-bottom: rem(32px)
+
+  &__video
+    background-color: $color-white
+    border: 2px solid $color-brand-dark
+    display: flex
+    justify-content: center
+    align-items: center
+
+  &__video
+    height: rem(240px)
+    grid-column: col-start 1 / span 12
+    @include media(tablet)
+      height: rem(280px)
+      grid-column: col-start 2 / span 10
+    @include media(tablet-ls)
+      height: rem(300px)
+      grid-column: col-start 3 / span 8
+    @include media(desktop)
+      height: rem(340px)
+      grid-column: col-start 4 / span 6
+
+    &__action
+      border-radius: 10000px
+      width: rem(48px)
+      height: rem(48px)
+      display: flex
+      justify-content: center
+      align-items: center
+      background-color: $color-brand-dark
+      .icon
+        fill: $color-white
+        height: rem(28px)
+      .icon-play
+        display: block
+      .icon-pause
+        display: none
+
+    &--playing
+      .video-area__video__action
+        display: none
+
+    &--pausing
+      .icon-play
+        display: none
+      .icon-pause
+        display: block
+
+
+
+

@@ -1,0 +1,7 @@
+archive
+node_modules
+
+.idea
+dist
+.config
+_site/*

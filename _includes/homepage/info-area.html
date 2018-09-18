@@ -1,0 +1,30 @@
+<section class="info-area" id="info-area">
+  <div class="container">
+    <header class="info-area__header">
+      <h1 class="info-area__heading">
+        Why Arkane
+      </h1>
+    </header>
+    <div class="info-area__infographic">
+      <div class="info-area__arkane">
+        <svg class="icon icon-arkane"><use xlink:href="#icon-arkane-a"></use></svg>
+      </div>
+      <div class="info-area__strokes">
+        <div class="info-area__strokes__top">
+        </div>
+        <div class="info-area__strokes__bottom">
+          <div class="info-area__stroke-left"></div>
+          <div class="info-area__stroke-middle"></div>
+          <div class="info-area__stroke-right"></div>
+        </div>
+      </div>
+      <div class="info-area__items">
+        {% include fragments/info-item.html content="Easy access" icon="wallets" %}
+        {% include fragments/info-item.html content="Secure" icon="secure" %}
+        {% include fragments/info-item.html content="Recoverable" icon="unlock" %}
+        {% include fragments/info-item.html content="Network of Apps" icon="apps" %}
+        {% include fragments/info-item.html content="Activity tracker" icon="activity" %}
+      </div>
+    </div>
+  </div>
+</section>

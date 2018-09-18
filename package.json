@@ -1,0 +1,27 @@
+{
+  "homepage": "https://arkane.network/",
+  "license": "MIT",
+  "name": "arkane-website",
+  "version": "6.1.0",
+  "description": "A professional front-end template for building fast, robust, and adaptable web apps or sites.",
+  "files": [
+    "CHANGELOG.md",
+    "LICENSE.txt",
+    "package.json",
+    "dist/",
+    "modernizr-config.json",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/FundRequest/arkane-website.git"
+  },
+  "scripts": {
+    "run": "bundle exec jekyll serve"
+  },
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "modernizr": "^3.6.0",
+    "normalize.css": "^8.0.0"
+  }
+}

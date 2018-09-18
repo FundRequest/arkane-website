@@ -1,0 +1,31 @@
+.rewards-area
+  padding: rem(60px) 0
+  background-size: cover
+  background-position: center center
+  @include media(tablet)
+    background-color: $color-bg-grey
+    background-image: url(../img/bg-gems.png)
+
+
+  &__icon
+    margin-bottom: rem(32px)
+    text-align: center
+    .icon
+      height: rem(60px)
+      width: rem(60px)
+      stroke: $color-text
+      stroke-width: 1px
+      fill: $color-text
+
+  &__header
+    text-align: center
+
+  &__heading
+    font-size: $font-size-heading-h1
+    font-weight: $font-weight-normal
+    margin: 0 0 rem(32px) 0
+
+  &__subheading
+    font-size: $font-size-big
+    font-weight: $font-weight-normal
+    margin-bottom: 0

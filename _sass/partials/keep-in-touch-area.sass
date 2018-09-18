@@ -1,0 +1,47 @@
+.newsletter
+  padding: rem(60px) 0
+  text-align: center
+  background-color: $color-lightest-grey
+
+  &__heading
+    color: $color-brand-dark
+    font-size: $font-size-heading-h1
+    font-weight: $font-weight-normal
+    margin-top: 0
+
+  &__subheading
+    font-size: $font-size-big
+    font-weight: $font-weight-normal
+
+  &__heading,
+  &__subheading
+    color: $color-text
+
+  .control
+    @include media(tablet)
+      grid-column: col-start 3 / span 8
+    @include media(desktop)
+      grid-column: col-start 4 / span 6
+    @include media(wide)
+      grid-column: col-start 5 / span 4
+
+    &__label
+      display: none
+
+    &__input
+      margin: 0 auto
+      border-color: $color-text
+      max-width: rem(256px)
+      line-height: rem(32px)
+      height: rem(32px)
+      &::placeholder
+        opacity: .25
+
+
+  &__cta
+    display: inline-block
+    margin: 0 auto
+    .btn
+      padding-left: rem(32px)
+      padding-right: rem(32px)
+      margin: 0

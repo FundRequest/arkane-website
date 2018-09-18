@@ -1,0 +1,13 @@
+
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>{{ page.title }} - Arkane</title>
+<meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+<meta name="keywords" content="{% if page.keywords %}{{ page.keywords | strip_html | strip_newlines }}{% else %}{{ site.keywords }}{% endif %}">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<link rel="manifest" href="site.webmanifest">
+<link rel="apple-touch-icon" href="icon.png">
+<!-- Place favicon.ico in the root directory -->
+<link rel="stylesheet" href="{{site.cssurl}}/main.css">

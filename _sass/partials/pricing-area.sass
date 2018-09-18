@@ -1,0 +1,123 @@
+.pricing-area
+  padding: rem(60px) 0
+  background: $color-white-smoke
+
+  &__heading
+    margin-bottom: rem(48px)
+    font-size: $font-size-heading-h1
+    font-weight: $font-weight-normal
+    text-align: center
+
+  &__subscription
+    background-color: $color-white
+    &--premium
+      box-shadow: 0 rem(2px) rem(8px) 0 rgba(0, 0, 0, 0.4)
+    &--ultimate
+      box-shadow: 0 rem(1px) rem(4px) 0 rgba(0, 0, 0, 0.3)
+
+  &__label
+    background-color: $color-brand-light
+
+  &__footer
+    text-align: center
+    font-size: $font-size-small
+    color: $color-brand-light
+
+  &__subheading
+    font-size: $font-size-regular
+
+  &__subscriptions
+    color: $color-text
+    display: flex
+    justify-content: stretch
+    @include media(desktop)
+      grid-column: col-start 3 / span 8
+
+  &__subscription
+    flex: 1
+    display: flex
+    justify-content: center
+    flex-wrap: wrap
+    align-content: space-between
+    box-shadow: $box-shadow
+    border-radius: $border-radius
+    border: 1px solid $color-lightest-grey
+    padding: rem(20px) rem(32px) rem(30px) rem(32px)
+    position: relative
+    transition: transform .2s ease-out
+    &:hover
+      z-index: 2
+      transform: scale(1.1)
+
+    &__content
+      display: flex
+      flex-direction: column
+      justify-content: flex-start
+
+    &--premium
+      z-index: 1
+      border: 0 none
+      margin: rem(-32px) rem(-6px) rem(-12px) rem(-6px)
+      overflow: hidden
+      padding-top: rem(32px + 20px)
+      background-color: $color-white
+      & .pricing-area__cta
+        margin-bottom: rem(12px)
+
+  &__label
+    position: absolute
+    left: 0
+    right: 0
+    top: 0
+    text-align: center
+    color: $color-white
+    font-size: $font-size-big
+    font-weight: $font-weight-bold
+    height: rem(32px)
+    line-height: rem(32px)
+
+  &__title
+    font-size: rem(34px)
+    line-height: rem(40px)
+    margin-bottom: rem(12px)
+
+  &__price
+    display: flex
+    align-items: flex-end
+    font-size: rem(50px)
+    line-height: rem(40px)
+    position: relative
+    color: $color-brand-light
+    margin-bottom: rem(40px)
+    &__postfix
+      font-size: $font-size-default
+      line-height: $font-size-default
+    &__note
+      color: $color-warm-grey
+      font-size: $font-size-xsmall
+      line-height: $line-height-xsmall
+      position: absolute
+      margin-top: rem(6px)
+      transform: translateY(100%)
+
+  &__benefits
+    font-weight: $font-weight-500
+    padding-left: rem(12px)
+    margin-top: 0
+    margin-bottom: rem(40px)
+    list-style: none
+
+  &__benefit
+    &::before
+      content: '-'
+      display: inline-block
+      text-indent: rem(-12px)
+
+  &__cta
+    text-align: center
+    width: 100%
+    .btn
+      width: auto
+      padding-left: rem(32px)
+      padding-right: rem(32px)
+      margin: 0
