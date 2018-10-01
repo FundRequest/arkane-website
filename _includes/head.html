@@ -8,6 +8,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 <link rel="manifest" href="site.webmanifest">
-<link rel="apple-touch-icon" href="icon.png">
-<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" sizes="16x16 24x24 32x32 64x64"/>
-<link rel="stylesheet" href="{{site.cssurl}}/main.css">
+<link rel="apple-touch-icon" href="{{site.baseurl}}icon.png?{{site.time | date: '%s%N'}}">
+<link rel="shortcut icon" href="{{site.baseurl}}favicon.ico?{{site.time | date: '%s%N'}}" type="image/x-icon" sizes="16x16 24x24 32x32 64x64"/>
+<link rel="stylesheet" href="{{site.cssurl}}/main.css?{{site.time | date: '%s%N'}}">
