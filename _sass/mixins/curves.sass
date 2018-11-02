@@ -1,0 +1,27 @@
+@mixin curves($top: white, $bottom: white)
+  @include media(tablet-ls)
+    &::before,
+    &::after
+      content: ''
+      display: block
+      position: absolute
+      background-size: cover
+      left: 0
+      right: 0
+      background-repeat: no-repeat
+
+    &::before
+      height: rem(216px)
+      top: 0
+      @if ($top == white)
+        background-image: url(../img/curve-top-how.svg)
+      @else
+        background-image: url(../img/curve-top-how-gray.svg)
+
+    &::after
+      height: rem(300px)
+      bottom: 0
+      @if ($bottom == white)
+        background-image: url(../img/curve-bottom-how.svg)
+      @else
+        background-image: url(../img/curve-bottom-how-gray.svg)

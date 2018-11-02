@@ -2,28 +2,20 @@
   <div class="container">
     <header class="info-area__header">
       <h1 class="info-area__heading">
-        Why Arkane
+        {{ include.title }}
       </h1>
     </header>
     <div class="info-area__infographic">
-      <div class="info-area__arkane">
-        <svg class="icon icon-arkane"><use xlink:href="#icon-arkane-a"></use></svg>
-      </div>
-      <div class="info-area__strokes">
-        <div class="info-area__strokes__top">
-        </div>
-        <div class="info-area__strokes__bottom">
-          <div class="info-area__stroke-left"></div>
-          <div class="info-area__stroke-middle"></div>
-          <div class="info-area__stroke-right"></div>
-        </div>
+      <div class="info-area__arkane__description">
+        <strong>Arkane is a multi-blockchain wallet provider</strong> that builds an open network between individuals, ecosystems and dapps. Your benefits are the following:
       </div>
       <div class="info-area__items">
-        {% include fragments/info-item.html content="Easy access" icon="wallets" %}
-        {% include fragments/info-item.html content="Multichain" icon="multichain" %}
-        {% include fragments/info-item.html content="Network of Apps" icon="apps" %}
-        {% include fragments/info-item.html content="Secure" icon="secure" %}
-        {% include fragments/info-item.html content="Recoverable" icon="unlock" %}
+        {% include fragments/info-item.html title="Easy access"      icon="wallets"    description="One account and one place to manage all your wallets." %}
+        {% include fragments/info-item.html title="Secure"           icon="secure"     description="Data and Secrets are fully encrypted with Vault Technology." %}
+        {% include fragments/info-item.html title="Recoverable"      icon="unlock"     description="Recover a wallet when you lose your unique Pin Code. " %}
+        {% include fragments/info-item.html title="Network of Apps"  icon="apps"       description="Do more with a wallet, connect it with integrated (d)apps." %}
+        {% include fragments/info-item.html title="Multichain"       icon="multichain" description="One dashboard to manage your crypto assets of various blockchains" %}
+        {% comment %}{% include fragments/info-item.html title="Activity tracker" icon="activity"   description="Have a clear overview of all your wallet activity." %}{% endcomment %}
       </div>
     </div>
   </div>

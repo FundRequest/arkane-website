@@ -1,0 +1,225 @@
+$how-area-zoom-border-width: rem(2px)
+
+.how-area
+  $text-width: rem(200px)
+  padding: rem(100px) 0 rem(50px) 0
+  background-image: $gradient-purple-pink
+  position: relative
+  @include curves(white, gray)
+
+  .container
+    position: relative
+
+  &__header
+    text-align: center
+    color: $color-white
+
+  &__heading
+    font-weight: $font-weight-normal
+    font-size: $font-size-heading-h1
+    margin-bottom: rem(72px)
+
+  &__content
+    display: flex
+    justify-content: center
+
+  &__images
+    position: relative
+    @include media(tablet-ls)
+      margin: 0 $text-width
+
+  &__image
+    width: 100%
+    height: auto
+
+  &__image,
+  &__info__zoom__image
+    @include media(tablet-ls)
+      width: rem($breakpoint-tablet-ls - 520px)
+    @include media(desktop)
+      width: rem($breakpoint-desktop - 520px)
+    @include media(wide)
+      width: rem($breakpoint-wide - 520px)
+
+  &__info
+    display: none
+
+    @include media(tablet-ls)
+      display: flex
+      position: absolute
+      align-items: center
+
+    &__text
+      width: $text-width
+      position: absolute
+      color: $color-white
+      font-size: $font-size-regular
+      &::before,
+      &::after
+        content: ''
+        position: absolute
+        display: block
+        top: 50%
+        transform: translateY(-50%)
+        height: 1px
+
+      &::before
+        width: rem(40px)
+        background-color: $color-white
+
+      &::after
+        background-color: $color-brand-dark
+
+    &__zoom
+      border: $how-area-zoom-border-width solid $color-brand-dark
+      border-radius: $border-radius-circle
+      box-shadow: $box-shadow-light
+      overflow: hidden
+      z-index: 3
+      position: absolute
+      cursor: zoom-in
+      &__image-wrapper
+        width:  100%
+        height: 100%
+        transition: all ease-out 300ms
+      &__image
+        transition: all ease-out 300ms
+        position: absolute
+
+      &:hover
+        .how-area__info__zoom__image-wrapper
+          transition: all ease-out 300ms
+
+@mixin how-area-zoom-image-top($scale, $scale-hover, $size, $top, $left-right, $border-width, $offset, $isLeft: true)
+  $offset: $offset + $left-right - $border-width
+
+  @if $isLeft
+    padding-left: $offset
+    margin-left: $offset * -1
+    left: $left-right - $border-width
+  @else
+    padding-right: $offset
+    margin-right: $offset * -1
+    right: $left-right - $border-width + $size
+
+  top: $top - $border-width
+  height: $size
+
+  .how-area__info__text
+    @if $isLeft
+      left: 0
+      padding-right: rem(50px)
+      &::before
+        right: 0
+      &::after
+        right: $left-right * -1
+    @else
+      right: $size * -1
+      padding-left: rem(50px)
+      &::before
+        left: 0
+      &::after
+        left: $left-right * -1
+
+    &::after
+      width: $left-right
+
+  .how-area__info__zoom
+    @if $size <= 0
+      display: none
+    @else
+      width: $size
+      height: $size
+      &__image-wrapper
+        transform: scale($scale)
+      &__image
+        top: $top * -1
+        @if $isLeft
+          left: $left-right * -1
+        @else
+          right: $left-right * -1
+
+      @if $scale != $scale-hover
+        &:hover
+          .how-area__info__zoom__image-wrapper
+            transform: scale($scale-hover)
+
+@mixin how-area-zoom-image-top-left($scale, $scale-hover, $size, $top, $left, $border-width, $offset)
+  @include how-area-zoom-image-top($scale, $scale-hover, $size, $top, $left, $border-width, $offset, true)
+
+@mixin how-area-zoom-image-top-right($scale, $scale-hover, $size, $top, $left, $border-width, $offset)
+  @include how-area-zoom-image-top($scale, $scale-hover, $size, $top, $left, $border-width, $offset, false)
+
+.how-area__info
+  $scale: 1.3
+  $scale-hover: 1.6
+  $offset: rem(200px)
+  $border-width: $how-area-zoom-border-width
+
+  &--multichain
+    @include media(tablet-ls)
+      $size: rem(160px)
+      $left: rem(-15px)
+      $top: rem(-50px)
+      @include how-area-zoom-image-top-left($scale, $scale-hover, $size, $top, $left, $border-width, $offset)
+    @include media(desktop)
+      $size: rem(180px)
+      $left: rem(-15px)
+      $top: rem(-60px)
+      @include how-area-zoom-image-top-left($scale, $scale-hover, $size, $top, $left, $border-width, $offset)
+    @include media(wide)
+      $size: rem(210px)
+      $left: rem(-20px)
+      $top: rem(-60px)
+      @include how-area-zoom-image-top-left($scale, $scale-hover, $size, $top, $left, $border-width, $offset)
+
+  &--tokens
+    @include media(tablet-ls)
+      $size: rem(110px)
+      $left: rem(120px)
+      $top: rem(110px)
+      @include how-area-zoom-image-top-left($scale, $scale-hover, $size, $top, $left, $border-width, $offset)
+    @include media(desktop)
+      $size: rem(130px)
+      $left: rem(150px)
+      $top: rem(150px)
+      @include how-area-zoom-image-top-left($scale, $scale-hover, $size, $top, $left, $border-width, $offset)
+    @include media(wide)
+      $size: rem(150px)
+      $left: rem(170px)
+      $top: rem(200px)
+      @include how-area-zoom-image-top-left($scale, $scale-hover, $size, $top, $left, $border-width, $offset)
+
+  &--account
+    @include media(tablet-ls)
+      $size: rem(60px)
+      $right: rem(6px)
+      $top: rem(-20px)
+      @include how-area-zoom-image-top-right(0, 0, $size, $top, $right, 0, $offset)
+    @include media(desktop)
+      $size: rem(60px)
+      $right: rem(8px)
+      $top: rem(-18px)
+      @include how-area-zoom-image-top-right(0, 0, $size, $top, $right, 0, $offset)
+    @include media(wide)
+      $size: rem(60px)
+      $right: rem(10px)
+      $top: rem(-15px)
+      @include how-area-zoom-image-top-right(0, 0, $size, $top, $right, 0, $offset)
+
+  &--apps
+    @include media(tablet-ls)
+      $size: rem(110px)
+      $right: rem(70px)
+      $top: rem(32px)
+      @include how-area-zoom-image-top-right($scale, $scale-hover, $size, $top, $right, $border-width, $offset)
+    @include media(desktop)
+      $size: rem(130px)
+      $right: rem(90px)
+      $top: rem(40px)
+      @include how-area-zoom-image-top-right($scale, $scale-hover, $size, $top, $right, $border-width, $offset)
+    @include media(wide)
+      $size: rem(150px)
+      $right: rem(110px)
+      $top: rem(50px)
+      @include how-area-zoom-image-top-right($scale, $scale-hover, $size, $top, $right, $border-width, $offset)

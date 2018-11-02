@@ -1,0 +1,96 @@
+.connecting-area
+  padding: 0 0 rem(100px) 0
+  background-color: $color-bg-grey
+
+  &__header
+    text-align: center
+    color: $color-text
+    margin-top: rem(-48px)
+    position: relative
+    z-index: 1
+
+  &__heading
+    font-weight: $font-weight-normal
+    font-size: $font-size-heading-h1
+    margin-bottom: rem(100px)
+
+  &__layer
+    justify-content: center
+    align-items: center
+    display: none
+    @include media(tablet)
+      display: flex
+      margin-bottom: rem(-20px)
+    @include media(tablet-ls)
+      margin-bottom: rem(-40px)
+    @include media(desktop)
+      margin-bottom: rem(-50px)
+    @include media(wide)
+      margin-bottom: rem(-60px)
+
+    &:last-child
+      margin-bottom: rem(20px)
+
+    &::before,
+    &::after
+      width: 30%
+
+    &__content
+      width: 30%
+      padding: 0 rem(16px)
+
+      &__title
+        font-weight: $font-weight-bold
+        font-size: $font-size-default
+      &__description
+        font-weight: $font-weight-normal
+        font-size: $font-size-regular
+
+
+    &__image-wrapper
+      width: 40%
+      display: flex
+      > div
+        width: 66.05%
+      &::after,
+      &::before
+        width: 33.95%
+        display: block
+
+    &__image
+      position: relative
+      height: auto
+      transition: transform 300ms ease-out
+      &:hover
+        transform: translateY(-6px)
+
+    &--arkane
+      color: $color-brand-light
+
+    &--consumers,
+    &--arkane
+      text-align: right
+      &::after
+        content: ' '
+        display: block
+      .connecting-area__layer__image-wrapper
+        &::after
+          content: ''
+
+    &--dapps,
+    &--blockchain
+      &::before
+        content: ' '
+        display: block
+      .connecting-area__layer__image-wrapper
+        &::before
+          content: ''
+
+    &--consumers .connecting-area__layer__image
+      z-index: 4
+    &--dapps .connecting-area__layer__image
+      z-index: 3
+    &--arkane .connecting-area__layer__image
+      z-index: 2
+    &--blockchain .connecting-area__layer__image
+      z-index: 1
