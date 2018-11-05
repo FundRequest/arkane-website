@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 282 160" xml:space="preserve">
+<style type="text/css">
+	.st0{opacity:0.5;}
+	.st1{fill:#620D63;}
+	.st2{fill:url(#SVGID_1_);}
+	.st3{fill:url(#SVGID_2_);}
+	.st4{fill:none;stroke:#FFFFFF;stroke-width:2;stroke-miterlimit:10;}
+</style>
+<g>
+	<g>
+		<g class="st0">
+			<g>
+				<g>
+					<path class="st1" d="M280.2,80.1c0-1.5-1.2-2.7-2.7-2.7H259c0.1,0.8,0.1,1,0.1,2.7c0,1,0,1.6,0,2.7h18.4
+						C279,82.9,280.2,81.6,280.2,80.1z"/>
+				</g>
+				<path class="st1" d="M281.6,80.1c0-2.8-2.3-5.1-5.1-5.1c-2.8,0-5.1,2.3-5.1,5.1c0,2.8,2.3,5.1,5.1,5.1
+					C279.3,85.3,281.6,83,281.6,80.1z"/>
+			</g>
+		</g>
+		<g class="st0">
+
+				<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="-0.5" y1="-191.8623" x2="259.104" y2="-191.8623" gradientTransform="matrix(1 0 0 1 0 272)">
+				<stop  offset="0" style="stop-color:#801C7D"/>
+				<stop  offset="1" style="stop-color:#481368"/>
+			</linearGradient>
+			<path class="st2" d="M259.1,78.8c0.1-3.4-1.7-7-5-9L136.5,2c-4.7-2.7-10.5-2.7-15.3,0L4.5,69.8c-3.4,2-5,5.4-5,8.8s0,1.2,0,4.6
+				S1.2,90,4.6,92l112.5,64.9c7.9,4.6,17.6,4.5,25.4-0.1L254.1,92c3.4-2,5-5.4,5-8.8C259.1,79.8,259,82.1,259.1,78.8z"/>
+
+				<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="-0.5" y1="80.7998" x2="259.104" y2="80.7998" gradientTransform="matrix(1 0 0 -1 0 162)">
+				<stop  offset="0" style="stop-color:#D633BB"/>
+				<stop  offset="0.4138" style="stop-color:#E140AE"/>
+				<stop  offset="1" style="stop-color:#F75A94"/>
+			</linearGradient>
+			<path class="st3" d="M259.1,78.8c0.1-3.4-1.7-7-5-9L136.5,2L254,69.8c6.7,3.9,6.8,13.7,0,17.6l-111.6,64.8
+				c-7.8,4.6-17.5,4.6-25.4,0.1L4.5,87.4c-3.3-1.9-5-5.2-5-8.5c0,3.1,0,1.1,0,4.4c0,3.4,1.7,6.8,5.1,8.8L117.1,157
+				c7.9,4.6,17.6,4.5,25.4-0.1L254.1,92c3.4-2,5-5.4,5-8.8C259.1,79.8,259,82.1,259.1,78.8z"/>
+		</g>
+	</g>
+	<g id="Low_x2F_Hi-Wireframes-Website---DESKTOP-_x26_-MOBILE_1_">
+
+			<g id="_x32_.-Devs-page---Desktop-HD---short-version-1st-release--Big-Screen_1_" transform="translate(-1878.000000, -885.000000)">
+			<g id="BENEFITS_1_" transform="translate(707.000000, 776.000000)">
+				<g id="_x34__1_" transform="translate(1119.000000, 106.000000)">
+					<g id="Group-4_1_" transform="translate(52.857143, 0.000000)">
+						<g id="ICON-audience_1_">
+							<g id="Group-7_1_" transform="translate(3.660000, 28.060001)">
+								<g id="Group-32_1_">
+									<circle id="Oval-Copy_1_" class="st4" cx="183.2" cy="46.1" r="3.6"/>
+									<circle id="Oval-Copy-2_1_" class="st4" cx="146.1" cy="46.1" r="3.6"/>
+									<circle id="Oval-Copy-3_1_" class="st4" cx="127.7" cy="46.1" r="3.6"/>
+								</g>
+							</g>
+							<path id="Combined-Shape_3_" class="st4" d="M131,103.5h-3.6v-9.3h-2.6V82.1h6h5.7v12.1h-2.4v9.3H131z"/>
+							<circle id="Oval-Copy-4_1_" class="st4" cx="168.4" cy="74.3" r="3.6"/>
+							<path id="Combined-Shape-Copy_1_" class="st4" d="M168,103.5h-3.6v-9.3H162V82.1h6h5.7v12.1h-2.4v9.3H168z"/>
+							<path id="Combined-Shape_2_" class="st4" d="M149.1,82h6c0.9,5.3,1.3,8.6,1.3,10s-1.3,2.1-3.7,2.1v9.4h-3.6h-2v-9.3
+								c-2.4,0-3.7-0.7-3.7-2.1s0.4-4.7,1.3-10L149.1,82L149.1,82z"/>
+							<path id="Combined-Shape-Copy-2_1_" class="st4" d="M192.1,82c0.9,5.3,1.3,8.6,1.3,10s-1.3,2.1-3.7,2.1v9.4h-3.6h-2v-9.3
+								c-2.4,0-3.7-0.7-3.7-2.1s0.4-4.7,1.3-10L192.1,82z"/>
+							<path id="Path-11_1_" class="st4" d="M136.2,65.8c0.3-2.4,1.4-3.7,3.6-3.7c2.1,0,3.3,1.3,3.4,3.7"/>
+							<path id="Path-11-Copy_1_" class="st4" d="M154.8,65.8c0.3-2.4,1.4-3.7,3.6-3.7c2.1,0,3.3,1.3,3.4,3.7"/>
+							<path id="Path-11-Copy-2_1_" class="st4" d="M173.4,65.8c0.3-2.4,1.4-3.7,3.6-3.7c2.1,0,3.3,1.3,3.4,3.7"/>
+							<path id="Path-11-Copy-3_1_" class="st4" d="M146.2,55.8c0.3-2.4,1.4-3.7,3.6-3.7c2.1,0,3.3,1.3,3.4,3.7"/>
+							<path id="Path-11-Copy-4_1_" class="st4" d="M164.8,55.8c0.3-2.4,1.4-3.7,3.6-3.7c2.1,0,3.3,1.3,3.4,3.7"/>
+							<path id="Path-11-Copy-5_1_" class="st4" d="M154.8,47.3c0.3-2.4,1.4-3.7,3.6-3.7c2.1,0,3.3,1.3,3.4,3.7"/>
+						</g>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+</g>
+</svg>
