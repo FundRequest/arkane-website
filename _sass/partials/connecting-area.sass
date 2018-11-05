@@ -17,12 +17,26 @@
     margin-bottom: rem(60px)
 
   &__layer
-    justify-content: center
+    display: flex
     align-items: center
-    display: none
+    position: relative
+    width: calc(100% + #{rem(100px)})
+    max-width: rem(400px)
+    margin: 0 auto rem(-20px) auto
+    transform: translateX(#{rem(-100px)})
+    &:last-child
+      margin-bottom: rem(20px)
+
+    @media only screen and (min-width: 440px)
+      max-width: 100%
+      transform: translateX(0)
+
     @include media(tablet)
-      display: flex
-      margin-bottom: rem(-20px)
+      justify-content: center
+      margin: 0 0 rem(-20px) 0
+      &::before,
+      &::after
+        width: 30%
     @include media(tablet-ls)
       margin-bottom: rem(-40px)
     @include media(desktop)
@@ -30,16 +44,10 @@
     @include media(wide)
       margin-bottom: rem(-60px)
 
-    &:last-child
-      margin-bottom: rem(20px)
-
-    &::before,
-    &::after
-      width: 30%
-
     &__content
-      width: 30%
       padding: 0 rem(16px)
+      @include media(tablet)
+        width: 30%
 
       &__title
         font-weight: $font-weight-bold
@@ -48,51 +56,60 @@
         font-weight: $font-weight-normal
         font-size: $font-size-regular
 
+    &__image-wrapper--small
+      display: block
+      @include media(tablet)
+        display: none
 
-    &__image-wrapper
-      width: 40%
-      display: flex
-      > div
-        width: 66.05%
-      &::after,
-      &::before
-        width: 33.95%
-        display: block
+    &__image-wrapper--big
+      display: none
+      @include media(tablet)
+        display: flex
+        width: 40%
+        > div
+          width: 66.05%
+        &::after,
+        &::before
+          width: 33.95%
+          display: block
 
     &__image
-      position: relative
+      width: rem(200px)
       height: auto
       transition: transform 300ms ease-out
+      @include media(tablet)
+        width: auto
       &:hover
         transform: translateY(-6px)
 
     &--arkane
       color: $color-brand-light
 
-    &--consumers,
-    &--arkane
-      text-align: right
-      &::after
-        content: ' '
-        display: block
-      .connecting-area__layer__image-wrapper
-        &::after
-          content: ''
-
-    &--dapps,
-    &--blockchain
-      &::before
-        content: ' '
-        display: block
-      .connecting-area__layer__image-wrapper
-        &::before
-          content: ''
-
-    &--consumers .connecting-area__layer__image
+    &--consumers
       z-index: 4
-    &--dapps .connecting-area__layer__image
+    &--dapps
       z-index: 3
-    &--arkane .connecting-area__layer__image
+    &--arkane
       z-index: 2
-    &--blockchain .connecting-area__layer__image
+    &--blockchain
       z-index: 1
+
+    @include media(tablet)
+      &--consumers,
+      &--arkane
+        text-align: right
+        &::after
+          content: ' '
+          display: block
+        .connecting-area__layer__image-wrapper
+          &::after
+            content: ''
+
+      &--dapps,
+      &--blockchain
+        &::before
+          content: ' '
+          display: block
+        .connecting-area__layer__image-wrapper
+          &::before
+            content: ''
