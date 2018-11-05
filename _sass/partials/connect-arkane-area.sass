@@ -1,6 +1,11 @@
 .connect-arkane-area
-  padding: rem(32px) 0
-  background-color: green
+  display: none
+  @include media(tablet)
+    display: block
+
+  $color-bg-connect-arkane-area: $color-white
+  padding: rem(100px) 0
+  background-color: $color-bg-connect-arkane-area
 
   &__header
     text-align: center
@@ -10,3 +15,127 @@
     font-weight: $font-weight-normal
     font-size: $font-size-heading-h1
     margin-bottom: rem(72px)
+
+  &__tree
+    position: relative
+    overflow: hidden
+    padding-left: rem(200px)
+    &__a
+      z-index: 3
+      position: absolute
+      left: 0
+      transform: translateY(rem(-100px))
+      width: rem(200px)
+      height: rem(200px)
+      padding: rem(20px)
+      &::before,
+      &::after
+        content: ''
+        position: absolute
+        background-color: $color-bg-connect-arkane-area
+
+      &::before
+        height: 100%
+        width: rem(180px)
+        left: 0
+      &::after
+        top: rem(80px)
+        width: rem(40px)
+        height: rem(40px)
+        border-radius: rem(40px)
+        right: rem(10px)
+
+      &__image
+        position: relative
+        z-index: 3
+        width: 100%
+        height: auto
+
+  &__container
+    @include media(tablet)
+      display: flex
+      justify-content: center
+      > *
+        padding: rem(16px)
+        width: 33.33%
+      .top-1::before
+        transform: translateY(rem(6px))
+      .top-2::before
+        transform: translateY(rem(12px))
+      .top-3::before
+        transform: translateY(rem(18px))
+      .bottom-1::before
+        transform: translateY(rem(-36px))
+      .bottom-2::before
+        transform: translateY(rem(-42px))
+
+
+  &__item
+    display: flex
+    align-items: flex-start
+    position: relative
+    height: 100%
+    &::before
+      content: ''
+      display: block
+      position: absolute
+      border-right: 2px solid $color-text
+      width: rem(2000px)
+      height: rem(80px)
+      right: calc(100% - #{rem(25px)})
+      @include media(tablet-ls)
+        right: calc(100% - #{rem(38px)})
+
+  &__icon
+    height: rem(50px)
+    width: rem(50px)
+    @include media(tablet-ls)
+      height: rem(76px)
+      width: rem(76px)
+    flex-shrink: 0
+    flex-grow: 0
+    position: relative
+    > svg
+      position: relative
+      z-index: 0
+      width: 100%
+      height: 100%
+      fill: $color-text
+      background-color: $color-bg-connect-arkane-area
+
+  &__container--top
+    .connect-arkane-area__item::before
+      bottom: 0
+      border-bottom: 2px solid $color-text
+      border-radius: 0 0 rem(25px) 0
+
+  &__container--bottom
+    margin-top: rem(32px)
+    .connect-arkane-area__item::before
+      top: 0
+      border-top: 2px solid $color-text
+      border-radius: 0 rem(25px) 0 0
+
+  &__text
+    padding-left: rem(20px)
+
+  &__title
+    font-weight: $font-weight-bold
+    margin-bottom: rem(6px)
+
+  &__list
+    padding-left: 0
+    list-style: none
+    margin: 0
+    font-size: $font-size-small
+    @include media(desktop)
+      font-size: $font-size-regular
+
+  &__list-item
+    position: relative
+    padding-left: rem(12px)
+    &::before
+      content: '- '
+      position: absolute
+      left: 0
+
