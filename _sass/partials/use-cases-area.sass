@@ -1,12 +1,64 @@
 .use-cases-area
-  padding: rem(32px) 0
-  background-color: green
+  padding: rem(12px) 0
+
+  @include media(tablet)
+    padding: rem(80px) 0 rem(60px) 0
 
   &__header
     text-align: center
     color: $color-text
+    margin-bottom: rem(30px)
 
   &__heading
     font-weight: $font-weight-normal
     font-size: $font-size-heading-h1
     margin-bottom: rem(72px)
+
+  &__item
+    margin-bottom: rem(20px)
+    @include media(phone-ls)
+      display: flex
+    @include media(tablet-ls)
+      display: block
+      grid-column: 2 / span 4
+      + div
+        grid-column: 8 / span 4
+
+  &__image
+    height: rem(100px)
+    width: 100%
+    margin-bottom: rem(20px)
+    flex-shrink: 0
+    flex-grow: 0
+    > img
+      object-fit: cover
+      height: 100%
+      width: 100%
+    @include media(phone-ls)
+      margin-right: rem(20px)
+      margin-bottom: 0
+      width: rem(200px)
+      > img
+        height: auto
+    @include media(tablet-ls)
+      margin-right: 0
+      margin-bottom: rem(40px)
+      height: rem(200px)
+      width: 100%
+      > img
+        height: 100%
+
+  &__title
+    font-size: rem(26px)
+    margin-bottom: rem(12px)
+    font-weight: $font-weight-normal
+
+  &__description
+    font-size: $font-size-regular
+
+  &__note
+    font-size: $font-size-small
+    font-weight: $font-weight-bold
+    color: $color-warm-grey
+
+
