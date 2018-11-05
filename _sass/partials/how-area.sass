@@ -2,9 +2,12 @@ $how-area-zoom-border-width: rem(2px)
 
 .how-area
   $text-width: rem(200px)
-  padding: rem(100px) 0 rem(50px) 0
   background-image: $gradient-purple-pink
   position: relative
+  padding: rem(50px) 0 rem(18px) 0
+  @include media(tablet-ls)
+    padding: rem(100px) 0 rem(50px) 0
+
   @include curves(white, gray)
 
   .container
@@ -17,22 +20,47 @@ $how-area-zoom-border-width: rem(2px)
   &__heading
     font-weight: $font-weight-normal
     font-size: $font-size-heading-h1
-    margin-bottom: rem(72px)
+    margin-bottom: rem(44px)
+    @include media(tablet-ls)
+      margin-bottom: rem(72px)
 
   &__content
-    display: flex
+    display: none
     justify-content: center
+    &--small
+      display: block
+      @include media(tablet-ls)
+        display: none
+    &--big
+      @include media(tablet-ls)
+        display: flex
 
   &__images
     position: relative
-    @include media(tablet-ls)
+    &--small
+      height: rem(360px)
+      width: 100%
+    &--big
       margin: 0 $text-width
 
   &__image
-    width: 100%
-    height: auto
+    &--small
+      height: 100%
+      width: auto
+      position: relative
+      text-align: center
+      display: block
+      left: 0
+      @media only screen and (min-width: 600px)
+        left: auto
+        margin: 0 auto
 
-  &__image,
+    &--big
+      width: 100%
+      height: auto
+
+
+  &__image--big,
   &__info__zoom__image
     @include media(tablet-ls)
       width: rem($breakpoint-tablet-ls - 520px)
@@ -41,34 +69,49 @@ $how-area-zoom-border-width: rem(2px)
     @include media(wide)
       width: rem($breakpoint-wide - 520px)
 
-  &__info
-    display: none
+  &__infos
+    display: flex
+    flex-wrap: wrap
+    margin-top: rem(32px)
+    > *
+      &:nth-child(2n)
+        padding-left: rem(12px)
+      &:nth-child(2n - 1)
+        padding-right: rem(12px)
+      width: 50%
+      flex-grow: 1
+      margin-bottom: rem(32px)
 
+  &__info
+    display: block
     @include media(tablet-ls)
       display: flex
       position: absolute
       align-items: center
 
     &__text
-      width: $text-width
-      position: absolute
       color: $color-white
       font-size: $font-size-regular
-      &::before,
-      &::after
-        content: ''
+      text-align: center
+      @include media(tablet-ls)
+        width: $text-width
         position: absolute
-        display: block
-        top: 50%
-        transform: translateY(-50%)
-        height: 1px
+        text-align: left
+        &::before,
+        &::after
+          content: ''
+          position: absolute
+          display: block
+          top: 50%
+          transform: translateY(-50%)
+          height: 1px
 
-      &::before
-        width: rem(40px)
-        background-color: $color-white
+        &::before
+          width: rem(40px)
+          background-color: $color-white
 
-      &::after
-        background-color: $color-brand-dark
+        &::after
+          background-color: $color-brand-dark
 
     &__zoom
       border: $how-area-zoom-border-width solid $color-brand-dark

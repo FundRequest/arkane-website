@@ -5,14 +5,16 @@
   &__header
     text-align: center
     color: $color-text
-    margin-top: rem(-48px)
     position: relative
     z-index: 1
+    margin-top: rem(50px)
+    @include media(tablet-ls)
+      margin-top: rem(-48px)
 
   &__heading
     font-weight: $font-weight-normal
     font-size: $font-size-heading-h1
-    margin-bottom: rem(100px)
+    margin-bottom: rem(60px)
 
   &__layer
     justify-content: center
