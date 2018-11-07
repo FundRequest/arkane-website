@@ -1,0 +1,16 @@
+<section class="connecting-area" id="connecting-area">
+  <div class="container">
+    <header class="connecting-area__header">
+      <h1 class="connecting-area__heading">
+        {{ include.title }}
+      </h1>
+    </header>
+
+    <div class="connecting-area__layers">
+      {% include homepage/connecting-area/consumers.html desktop="true" %}
+      {% include homepage/connecting-area/dapps.html desktop="true" %}
+      {% include homepage/connecting-area/arkane.html desktop="true" %}
+      {% include homepage/connecting-area/blockchain.html desktop="true" %}
+    </div>
+  </div>
+</section>

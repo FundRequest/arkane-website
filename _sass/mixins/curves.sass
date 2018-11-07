@@ -1,0 +1,61 @@
+@mixin curves($top: white, $bottom: white)
+  @include media(tablet-ls)
+    &::before,
+    &::after
+      content: ''
+      display: block
+      position: absolute
+      background-size: 100% 100%
+      left: 0
+      right: 0
+      background-repeat: no-repeat
+
+    &::before
+      height: rem(216px)
+      top: 0
+      @if ($top == white)
+        background-image: url(../img/curve-top-how.svg)
+      @else
+        background-image: url(../img/curve-top-how-gray.svg)
+
+    &::after
+      height: rem(300px)
+      bottom: 0
+      @if ($bottom == white)
+        background-image: url(../img/curve-bottom-how.svg)
+      @else
+        background-image: url(../img/curve-bottom-how-gray.svg)
+
+@mixin curvesHeader()
+  @include media(tablet-ls)
+    &::before,
+    &::after
+      content: ''
+      display: block
+      position: absolute
+      background-size: 100% 100%
+      left: -25%
+      right: -25%
+      background-repeat: no-repeat
+
+    &::before
+      height: 80%
+      top: 0
+      background-image: url(../img/curve-top-header.svg)
+
+    &::after
+      height: 30%
+      bottom: rem(-2px)
+      background-image: url(../img/curve-bottom-header.svg)
+
+  @media only screen and (min-width: 1800px)
+    &::before,
+    &::after
+      left: -15%
+      right: -15%
+
+  @media only screen and (min-width: 2400px)
+    &::before,
+    &::after
+      left: 0
+      right: 0
