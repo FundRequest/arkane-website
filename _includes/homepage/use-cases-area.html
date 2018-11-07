@@ -7,7 +7,7 @@
     </header>
 
     {% capture thorblock %}
-      <p><a href="https://thorblock.io/" target="_blank" title="ThorBlock website">ThorBlock</a> is a pooling service on the VeChain blockchain uses Arkane's services to
+      <p><a class="link" href="https://thorblock.io/" target="_blank" title="ThorBlock website">ThorBlock</a> is a pooling service on the VeChain blockchain uses Arkane's services to
         provide their users a hassle free and easy user experience.</p>
 
       <p>ThorBlock uses following components of Arkane:</p>
@@ -18,19 +18,23 @@
       </ul>
 
       <p>Making blockchain apps more user-friendly is a goal both Safe Haven and Arkane Network have in common.</p>
-      <a href="https://medium.com/arkane-network/case-study-how-thorblock-leverages-the-power-of-arkane-network-614f96fce9f2" target="_blank"
+      <a class="link" href="https://medium.com/arkane-network/case-study-how-thorblock-leverages-the-power-of-arkane-network-614f96fce9f2" target="_blank"
          title="ThorBlock case study blog">Read more here ...</a>
     {% endcapture %}
     {% include fragments/use-case.html image="use-case-thorblock.jpg" imageAlt="ThorBlock"  title="ThorBlock - Pooling service on VeChain" content=thorblock %}
 
 
-    {% capture loremIpsum %}
-    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-    <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet,
-      consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-    <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet,
-      consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+    {% capture placeholder %}
+    <p>Want to build powerful blockchain applications without in depth blockchain knowledge?</p>
+    <p>Use Arkane Connect, a simple-to-use javascript library to integrate blockchain into your apps.</p>
+    <p>Start now by requesting your free API key</p>
+    <div class="use-cases-area__ctas">
+      <a class="btn btn--secondary" href="https://arkane-network.typeform.com/to/kTGcKf" target="_blank">
+        Request API Key
+      </a>
+      <a class="link" href="https://docs.arkane.network" target="_blank" title="API documentation">Or view documentation</a>
+    </div>
     {% endcapture %}
-    {% include fragments/use-case.html image="testimonial-author-jan.jpg" imageAlt="Jan"  title="Lorem ipsum dolor sit amet." content=loremIpsum %}
+    {% include fragments/use-case.html image="use-case-placeholder.jpg" placeholder="Your use case here?" imageAlt="API Key"  title="Tools for app developers to use and abuse" content=placeholder %}
   </div>
 </section>

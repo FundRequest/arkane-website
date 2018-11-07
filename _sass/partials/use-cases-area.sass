@@ -30,16 +30,20 @@
     margin-bottom: rem(20px)
     flex-shrink: 0
     flex-grow: 0
+    overflow: hidden
+    position: relative
+    box-shadow: 0 0 rem(5px) 0 $color-lightest-grey
+    border-radius: $border-radius-small
+
     > img
       object-fit: cover
       height: 100%
       width: 100%
+
     @include media(phone-ls)
       margin-right: rem(20px)
       margin-bottom: 0
       width: rem(200px)
-      > img
-        height: auto
     @include media(tablet-ls)
       margin-right: 0
       margin-bottom: rem(40px)
@@ -47,6 +51,25 @@
       width: 100%
       > img
         height: 100%
+
+  &__image-placeholder
+    position: absolute
+    display: flex
+    left: 0
+    top: 0
+    height: 100%
+    width: 100%
+    text-align: center
+    justify-content: center
+    align-items: center
+    color: $color-brand-dark
+    padding: rem(12px)
+    font-size: rem(24px)
+    font-weight: $font-weight-500
+    text-shadow: 0 0 rem(3px) $color-warm-grey
+    @include media(tablet-ls)
+      font-size: rem(32px)
+
 
   &__title
     font-size: rem(26px)
@@ -61,4 +84,13 @@
     font-weight: $font-weight-bold
     color: $color-warm-grey
 
+  &__ctas
+    display: flex
+    align-items: baseline
+    justify-content: flex-start
+    padding: rem(12px) 0
+
+    .btn
+      width: auto
+      margin-right: rem(20px)
 
