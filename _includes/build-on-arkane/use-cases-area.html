@@ -1,0 +1,27 @@
+<section class="use-cases-area" id="use-cases-area">
+  <div class="container">
+    <header class="use-cases-area__header">
+      <h1 class="use-cases-area__heading">
+        {{ include.title }}
+      </h1>
+    </header>
+
+    {% capture truffle %}
+      <p>Truffle suite is undeniably the most-used development framework in blockchain. We use it to deploy and migrate our smart contracts.</p>
+      <p>While we rely on truffle's framework we didn't want to make a trade-off between ease of use and security.</p>
+      <p>By combining Truffle's Framework with the Arkane Wallet provider we grant permission based access to  our teammates to pre-sign transactions before it is sent to the
+        blockchain.
+      </p>
+    {% endcapture %}
+    {% include fragments/use-case.html image="use-case-truffle.png" imageAlt="Truffle" title="Use Truffle suite with Arkane Wallet Provider" content=truffle %}
+
+    {% capture loremIpsum %}
+    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+    <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet,
+      consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+    <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet,
+      consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+    {% endcapture %}
+    {% include fragments/use-case.html image="testimonial-author-jan.jpg" imageAlt="Jan"  title="Lorem ipsum dolor sit amet." content=loremIpsum %}
+  </div>
+</section>

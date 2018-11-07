@@ -1,0 +1,31 @@
+<section class="how-area" id="how-area">
+  <div class="container">
+    <header class="how-area__header">
+      <h1 class="how-area__heading">
+        {{ include.title }}
+      </h1>
+    </header>
+    <div class="how-area__content how-area__content--big">
+      <div class="how-area__images how-area__images--big">
+        <img class="how-area__image--big" src="{{site.imgurl}}/arkane-screen-tokens.png" alt="arkane screenshot tokens"/>
+        {% include homepage/how-area/multichain.html image="true" %}
+        {% include homepage/how-area/tokens.html image="true" %}
+        {% include homepage/how-area/account.html %}
+        {% include homepage/how-area/dapps.html image="true" %}
+      </div>
+    </div>
+  </div>
+  <div class="how-area__content how-area__content--small">
+    <div class="how-area__images how-area__images--small">
+      <img class="how-area__image--small" src="{{site.imgurl}}/arkane-screen-tokens-small.png" alt="arkane screenshot tokens"/>
+    </div>
+    <div class="container">
+      <div class="how-area__infos">
+        {% include homepage/how-area/multichain.html %}
+        {% include homepage/how-area/tokens.html %}
+        {% include homepage/how-area/account.html %}
+        {% include homepage/how-area/dapps.html %}
+      </div>
+    </div>
+  </div>
+</section>
