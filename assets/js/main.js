@@ -27,7 +27,7 @@
       } else {
         $body.addClass('nav-mobile-is-open');
       }
-    });
+    }, event === 'touchstart' ? {passive: true} : {});
   }
 
   $(function() {
