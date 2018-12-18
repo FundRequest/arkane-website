@@ -19,10 +19,10 @@
   function initMobileMenu() {
     var event = 'ontouchstart' in document.documentElement ? 'touchstart' : 'click';
 
-    $('.nav-mobile__button').on(event, function() {
+    document.querySelector('.nav-mobile__button').addEventListener(event, function() {
       var $body = $('body');
       var isOpen = $body.hasClass('nav-mobile-is-open');
-      if(isOpen) {
+      if (isOpen) {
         $body.removeClass('nav-mobile-is-open');
       } else {
         $body.addClass('nav-mobile-is-open');
@@ -34,4 +34,8 @@
     replacePageBg();
     initMobileMenu();
   });
+
+  if ('serviceWorker' in navigator) {
+    // navigator.serviceWorker.register('../../service-worker.js');
+  }
 })(window, jQuery);
