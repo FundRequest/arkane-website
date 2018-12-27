@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" xml:space="preserve" viewBox="0 0 200 200">
+  <style type="text/css">
+    .st-wallet {
+      fill: #FFFFFF;
+      stroke: #620d63;
+      stroke-width: 8;
+    }
+
+    .st-wallet-1 {
+      fill: #FFFFFF;
+      stroke: #620d63;
+      stroke-width: 8;
+    }
+  </style>
+  <g>
+    <path class="st-wallet" d="M6.5,22.4c-1.2,0-2.5,0.8-2.5,2v150.7c0,1.2,1.2,2.5,2.5,2.5h178.1c1.2,0,2.5-1.2,2.5-2.5
+		V24.4c0-1.2-1.2-2-2.5-2H6.5z"/>
+    <path class="st-wallet-1" d="M150.2,81.6H187c4.9,0,9,4.1,9,9V109c0,4.9-4.1,9-9,9h-36.8c-4.9,0-9-4.1-9-9V90.6
+		C141.3,85.7,145.3,81.6,150.2,81.6z"/>
+    <circle fill="#620d63" cx="168.6" cy="100" r="6.9"/>
+  </g>
+</svg>

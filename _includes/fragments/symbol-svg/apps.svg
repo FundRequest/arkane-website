@@ -1,4 +1,5 @@
-<symbol id="icon-apps" viewBox="0 0 210 210">
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" xml:space="preserve" viewBox="0 0 210 210">
   <style type="text/css">
     .st-apps{fill:none;stroke:#620D63;stroke-width:8;stroke-miterlimit:10;}
     .st-apps-1{stroke:#620D63;fill:#620D63}
@@ -28,4 +29,4 @@
 		c0,0,1.1-1.8,2-1.7c0.9,0,2,1.7,2,1.7l15.3,25.2h2L128.8,119.9z"/>
     <path class="st-apps-1" d="M109.1,102.3h-4.5c-0.9,0-1.7,0.8-1.7,1.7s0.8,1.7,1.7,1.7h4.5c0.9,0,1.7-0.8,1.7-1.7S110.1,102.3,109.1,102.3z"/>
   </g>
-</symbol>
+</svg>
