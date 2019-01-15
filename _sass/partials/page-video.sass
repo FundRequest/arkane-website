@@ -1,0 +1,46 @@
+.page-video-wrapper
+  position: fixed
+  left: 0
+  right: 0
+  bottom: 0
+  top: 0
+  background-color: rgba(0,0,0,.7)
+  display: flex
+  justify-content: center
+  align-items: center
+  z-index: -9999
+  opacity: 0
+  transition: opacity 100ms ease-out
+  @include media(tablet-ls)
+    padding: 20vh 15vw
+
+
+.page-video-wrapper__close
+  position: absolute
+  right: rem(20px)
+  top: rem(20px)
+  width: rem(40px)
+  height: rem(40px)
+  z-index: 1
+  background: rgba(0,0,0,.2)
+  @include media(tablet-ls)
+    background: 0 none
+
+.page-video
+  position: relative
+  width: 100%
+  height: auto
+  background-color: $color-black
+  overflow: hidden
+  @include media(tablet-ls)
+    box-shadow: $box-shadow-dark
+    border-radius: $border-radius
+
+body.page-video-visible
+  height: 100%
+  overflow: hidden
+
+body.page-video-visible .page-video-wrapper
+  z-index: 9998
+  opacity: 1
+  transition: opacity 300ms ease-out
