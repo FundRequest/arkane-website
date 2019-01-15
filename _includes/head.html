@@ -6,7 +6,7 @@
 <meta name="keywords" content="{% if page.keywords %}{{ page.keywords | strip_html | strip_newlines }}{% else %}{{ site.keywords }}{% endif %}">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta http-equiv='content-security-policy' content="default-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com; frame-src 'none'">
+<meta http-equiv='content-security-policy' content="default-src 'self' 'unsafe-inline' blob: https://videodelivery.net https://embed.videodelivery.net https://stats.videodelivery.net https://www.googletagmanager.com https://www.google-analytics.com; frame-src 'none';">
 
 <link rel="manifest" href="site.webmanifest">
 <link rel="apple-touch-icon" href="/icon.png?{{site.time | date: '%s%N'}}">

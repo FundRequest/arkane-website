@@ -1,0 +1,37 @@
+.page-video-wrapper
+  position: fixed
+  left: 0
+  right: 0
+  bottom: 0
+  top: 0
+  background-color: $color-black
+  display: flex
+  justify-content: center
+  align-items: center
+  z-index: -9999
+  opacity: 0
+  transition: opacity 100ms ease-out
+
+.page-video-wrapper__close
+  position: absolute
+  right: rem(20px)
+  top: rem(20px)
+  width: rem(40px)
+  height: rem(40px)
+  z-index: 1
+
+.page-video
+  position: absolute
+  width: 100%
+  .video-js.vjs-fluid
+    height: 100vh
+    padding-top: 0
+
+body.page-video-visible
+  height: 100%
+  overflow: hidden
+
+body.page-video-visible .page-video-wrapper
+  z-index: 9998
+  opacity: 1
+  transition: opacity 300ms ease-out
