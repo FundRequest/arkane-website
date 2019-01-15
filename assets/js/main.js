@@ -70,6 +70,15 @@
             $bus.trigger('page-video-hide');
           }
         }
+        if (e.key === ' ') {
+          if($body.hasClass('page-video-visible')) {
+            if(stream.paused) {
+              $bus.trigger('page-video-play');
+            } else {
+              $bus.trigger('page-video-pause');
+            }
+          }
+        }
       });
     }
 
