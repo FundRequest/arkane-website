@@ -6,6 +6,7 @@ keywords: "arkane, wallet, ico, kyc, blockchain, wallet provider"
 url: "https://arkane.network" # the base hostname & protocol for your site
 twitter_username: fundrequest_io
 github_username:  FundRequest
+gtm_id: "GTM-P2JM2R2"
 sass:
   sass_dir: _sass
   style: compressed
