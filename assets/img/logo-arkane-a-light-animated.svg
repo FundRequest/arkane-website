@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="-4 -13 92 92">
   <defs>
-    <linearGradient id="arkane-gradient" x1="0%" y1="0%" x2="100%" y2="0%" gradientTransform="rotate(-8)">
+    <linearGradient id="arkane-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="-.4" stop-color="#f74989">
         <animate id="anim" attributeName="offset" from="-.4" to="1" dur="1000ms" fill="freeze" begin="2s;anim.end+5000ms"/>
         <animate id="anim2" attributeName="offset" from="-.8" to="-2" dur="220ms" fill="freeze" begin="anim.end+500ms"/>
