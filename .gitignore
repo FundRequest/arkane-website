@@ -1,6 +1,6 @@
 archive
 node_modules
-
+.gemrc
 .idea
 dist
 .config
