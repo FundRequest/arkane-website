@@ -1,0 +1,44 @@
+---
+title: Cookie Policy
+page: cookie-policy
+---
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  {% include head.html %}
+</head>
+
+<body>
+{% include bodyTop.html %}
+<!--[if lte IE 9]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/" rel="noopener noreferrer">upgrade
+  your browser</a> to improve your experience and security.</p>
+<![endif]-->
+
+{% include fragments/navigation-mobile.html %}
+<div class="page-wrapper">
+  <header class="header" id="header">
+    <div class="container">
+      {% include fragments/navigation.html %}
+    </div>
+  </header>
+  <section>
+    <div class="container">
+      <div class="terms-area">
+        <section>
+          <h1>Cookies</h1>
+          {% include fragments/cookie-policy.html %}
+        </section>
+      </div>
+    </div>
+  </section>
+
+  {% include footer.html %}
+  {% include scripts.html %}
+</div>
+</body>
+
+</html>
+
+
