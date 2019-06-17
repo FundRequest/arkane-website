@@ -1,11 +1,14 @@
 .footer
-  background-color: $color-greyish-brown
-  color: $color-white
+  background-color: $color-white
+  color: $color-text
   font-size: $font-size-regular
   padding: rem(60px) 0 rem(40px) 0
 
   &__logo
     height: rem(36px)
+    @include media(tablet)
+      height: rem(68px)
+      margin-bottom: rem(16px)
 
   &__title
     display: block
@@ -17,9 +20,11 @@
       display: none
 
   &__contact-details
+    strong
+      margin-bottom: rem(16px)
     p
       font-size: $font-size-small
-      margin-bottom: rem(12px)
+      margin: rem(4px) 0
 
   &__container
     max-width: $container-width
@@ -71,97 +76,48 @@
       line-height: rem(36px)
       font-weight: $font-weight-bold
 
+    &__description
+      margin: 0
+      line-height: rem(36px)
+
     &__links
       list-style: none
       padding-left: 0
 
     &__link
-      margin-bottom: rem(20px)
+      margin-bottom: rem(12px)
 
     &__social
       margin-bottom: rem(32px)
       @include media(tablet)
-        text-align: right
+        text-align: left
 
   .link--social
     margin: 0 rem(6px)
     display: inline-flex
     width: rem(32px)
     height: rem(32px)
-    color: $color-white
+    color: $color-text
     justify-content: center
     align-items: center
     border-radius: 9999px
-    background-color: $color-white
+    background-color: $color-text
     &:hover
       box-shadow: $box-shadow-dark
     @include media(tablet)
-      margin: 0 0 0 rem(20px)
+      margin: 0 rem(12px) 0 0
 
     .icon
       display: inline-block
       width: rem(16px)
       height: rem(16px)
-      fill: $color-text
-      stroke: $color-text
+      fill: $color-white
+      stroke: $color-white
 
   &__powered-by
-    font-size: $font-size-xsmall
-    text-align: center
-    margin-top: rem(80px)
-
-  &__lang-switch
-    display: flex
-    justify-content: flex-end
-
-.lang-switch
-  list-style: none
-  padding: 0
-  border-radius: $border-radius-small
-  border: 1px solid $color-white
-  display: inline-block
-  margin: 0
-  font-size: $font-size-small
-  text-align: center
-  position: relative
-
-  .icon
-    width: rem(16px)
-    height: rem(16px)
-    position: absolute
-    left: rem(12px)
-    top: rem(8px)
-    fill: $color-white
-
-  &__item
-    cursor: pointer
-    display: block
+    background-color: #90bfce
     color: $color-white
-    padding: 0 0 0 rem(20px)
-    position: absolute
-    height: 0
-    width: 0
-    visibility: hidden
-    &:hover,
-    &:active,
-    &:focus
-      background-color: rgba($color-white, 0.1)
-
-    &--active
-      position: relative
-      height: auto
-      width: rem(60px)
-      line-height: rem(32px)
-      visibility: visible
-
-  &:hover,
-  &:active,
-  &:focus,
-  &:focus-within,
-    .lang-switch__item:not(.lang-switch__item--active)
-      position: relative
-      height: auto
-      width: rem(60px)
-      visibility: visible
-      line-height: rem(24px)
-
+    font-size: $font-size-small
+    text-align: center
+    line-height: rem(40px)
+    width: 100%

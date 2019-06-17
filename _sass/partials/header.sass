@@ -6,26 +6,31 @@
     padding-top: 0
     margin-bottom: rem(192px)
 
-  &--home
-    .header__play-button
+  .container
+    position: relative
+    z-index: 1
+
+  .header__image
+    &__bg
       @include media(tablet)
-        display: none
+        opacity: 1
+
+  &--home
+    .header__image__bg
+        @include media(tablet)
+          background-image: url(../img/visual-arkane.png)
 
   &--dev
     margin-bottom: rem(80px)
 
     @include media(tablet-ls)
       background-image: linear-gradient(to right, #C9ACC9, #fbc2d7)
-    @include curvesHeader()
 
-    .container
-      position: relative
-      z-index: 1
+    @include curvesHeader()
 
     .header__image
       &__bg
         @include media(tablet)
-          opacity: 1
           background-image: url(../img/visual-dev-blur.png)
 
   &__image
@@ -33,15 +38,18 @@
     max-width: rem(280px)
     margin: 0 auto
     @include media(tablet)
-      display: none
+      max-width: none
+      width: 100%
+      height: auto
+      opacity: 0
 
     &__bg, &__bg-big
       display: none
       @include media(tablet)
         position: absolute
         display: block
-        left: rem(20px)
-        right: rem(48px)
+        left: 0
+        right: 0
         top: 0
         bottom: 0
         background-size: contain
@@ -114,20 +122,6 @@
     height: 100%
     filter: drop-shadow($drop-shadow-dark)
 
-.intro-play-button
-  position: relative
-  display: none
-  @include media(tablet)
-    display: block
-    grid-column-start: 8
-    grid-column-end: span 4
-  @include media(tablet-ls)
-    grid-column-start: 7
-    grid-column-end: span 3
-  @include media(desktop)
-    grid-column-start: 6
-    grid-column-end: span 5
-
 .intro
   grid-column-start: 1
   grid-column-end: span 12
@@ -169,6 +163,20 @@
       grid-column-start: 8
       margin: rem(180px) 0
 
+.intro-right
+  grid-column-start: 1
+  grid-column-end: span 12
+  position: relative
+  @include media(tablet)
+    grid-column-start: 9
+    grid-column-end: span 4
+  @include media(tablet-ls)
+    grid-column-start: 10
+    grid-column-end: span 3
+  @include media(desktop)
+    grid-column-start: 8
+    grid-column-end: span 5
+
 .ctas
   @include media(tablet-ls)
     margin-bottom: rem(44px)
@@ -192,3 +200,6 @@
         margin-right: $grid-gap
       &:last-child
         margin-left: $grid-gap
+
+      &:first-child:last-child
+        margin: 0

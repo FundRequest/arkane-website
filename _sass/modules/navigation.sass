@@ -39,21 +39,19 @@
       font-weight: $font-weight-btn
       .btn
         margin: 0
+        font-weight: $font-weight-bold
+        @include media(tablet)
+          margin-left: rem(16px)
       .link
         justify-content: space-between
-        line-height: rem(32px)
-        margin: 0 0 0 rem(32px)
-        border-bottom: 2px solid transparent
-        transition: border-bottom-color 200ms ease-out
+        line-height: rem(42px)
+        padding: rem(0 16px)
+        border: none
+        transition: color 200ms ease-out
         &:hover, &:active
           text-decoration: none
 
         &:hover, &:active,
         &--active
-          border-bottom: 2px solid $color-brand-light
+          color: $color-brand
 
-
-  .btn--outline
-    border-width: 0
-    @include media(tablet)
-      border-width: 1px

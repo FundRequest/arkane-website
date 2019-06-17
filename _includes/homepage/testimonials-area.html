@@ -1,81 +1,120 @@
-<section class="testimonials-area" id="testimonials-area">
+<section class="tm" id="tm">
+  <div class="tm__bg">
+    <div class="tm__bg__outer">
+      <div class="tm__bg__outer__line tm__bg__outer__line--1"></div>
+      <div class="tm__bg__outer__line tm__bg__outer__line--2"></div>
+    </div>
+    <div class="container">
+      <div class="tm__bg__inner">
+        <div class="tm__bg__line tm__bg__line--1">
+          <svg class="tm__bg__svg tm__bg__svg--lt">
+            <polygon points="160,0 0,0 0,160"></polygon>
+          </svg>
+          <svg class="tm__bg__svg tm__bg__svg--rt">
+            <polygon points="0,0 160,0 160,160"></polygon>
+          </svg>
+        </div>
+        <div class="tm__bg__line tm__bg__line--2">
+          <div class="tm__bg__start">
+            <svg class="tm__bg__svg tm__bg__svg--lb">
+              <polygon points="0,80 0,0 80,80"></polygon>
+            </svg>
+            <svg class="tm__bg__svg tm__bg__svg--rt">
+              <polygon points="0,0 80,0 80,80"></polygon>
+            </svg>
+          </div>
+          <div class="tm__bg__middle"></div>
+          <div class="tm__bg__end">
+            <svg class="tm__bg__svg tm__bg__svg--rb">
+              <polygon points="0,80 80,80 80,0"></polygon>
+            </svg>
+            <svg class="tm__bg__svg tm__bg__svg--lt">
+              <polygon points="0,80 0,0 80,0"></polygon>
+            </svg>
+          </div>
+        </div>
+        <div class="tm__bg__line tm__bg__line--3">
+          <svg class="tm__bg__svg tm__bg__svg--lb">
+            <polygon points="0,0 0,80, 80,80"></polygon>
+          </svg>
+          <svg class="tm__bg__svg tm__bg__svg--rb">
+            <polygon points="0,80 80,80 80,0"></polygon>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="container">
-    <header class="testimonials-area__header">
-      <h1 class="testimonials-area__heading">
-        {{ include.title }}
-      </h1>
-    </header>
+    <div class="tm__content">
+      <header class="tm__header">
+        <h1 class="tm__heading">
+          Testimonials
+        </h1>
+      </header>
 
-    <!--<div class="testimonials-area__testimonials">-->
-    <div class="testimonials-area__testimonial">
-      <div class="testimonials-area__testimonial__content">
-        <div class="testimonials-area__testimonial__text">
-          Arkane solves a real problem and gives me fresh insights to build more useful features on top of
-          <strong><a class="link link--dark" href="https://coinstats.app/" rel="noopener noreferrer">Coin Stats</a></strong>.
-        </div>
-        <div class="testimonials-area__testimonial__author">
-          <div class="testimonials-area__testimonial__photo">
-            <img src="{{site.imageurl}}/testimonial-author-narek.jpg" alt="Narek - Fonder Coin Stats">
-          </div>
-          <div class="testimonials-area__testimonial__id">
-            <div class="testimonials-area__testimonial__name">
-              Narek
+      <div class="tm__testimonials">
+        <div class="tm__testimonial">
+          <div class="tm__testimonial__content">
+            <div class="tm__testimonial__author">
+              <div class="tm__testimonial__photo">
+                <img src="{{site.imageurl}}/testimonial-author-jurgen.jpg" alt="Jurgen - CTO & Founder @ SafeHaven">
+              </div>
+              <div class="tm__testimonial__id">
+                <div class="tm__testimonial__name">
+                  Jurgen Schouppe
+                </div>
+                <div class="tm__testimonial__description">
+                  CTO @ Safe Haven
+                </div>
+              </div>
             </div>
-            <div class="testimonials-area__testimonial__description">
-              Founder Coin Stats
+            <div class="tm__testimonial__text">
+              Thanks to Arkane we were able to build Thorblock faster and make it a user-friendly pooling service with a built-in Vechain wallet.
+            </div>
+          </div>
+        </div>
+        <div class="tm__testimonial">
+          <div class="tm__testimonial__content">
+            <div class="tm__testimonial__author">
+              <div class="tm__testimonial__photo">
+                <img src="{{site.imageurl}}/testimonial-author-narek.jpg" alt="Narek - CEO & Founder @ Coin Stats">
+              </div>
+              <div class="tm__testimonial__id">
+                <div class="tm__testimonial__name">
+                  Narek Gevorgyan
+                </div>
+                <div class="tm__testimonial__description">
+                  CEO @ CoinStats
+                </div>
+              </div>
+            </div>
+            <div class="tm__testimonial__text">
+              Arkane solves a real problem and gives me fresh insights to build more useful features on top of Coin Stats.
+            </div>
+          </div>
+        </div>
+        <div class="tm__testimonial">
+          <div class="tm__testimonial__content">
+            <div class="tm__testimonial__author">
+              <div class="tm__testimonial__photo">
+                <img src="{{site.imageurl}}/testimonial-author-jan.jpg" alt="Jan - Director In The Pocket">
+              </div>
+              <div class="tm__testimonial__id">
+                <div class="tm__testimonial__name">
+                  Jan Deruyck
+                </div>
+                <div class="tm__testimonial__description">
+                  Director @ In The Pocket
+                </div>
+              </div>
+            </div>
+            <div class="tm__testimonial__text">
+              With Arkane we can build blockchain applications for our enterprise clients without becoming blockchain experts ourselves.
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="testimonials-area__testimonial">
-      <div class="testimonials-area__testimonial__content">
-        <div class="testimonials-area__testimonial__text">
-          Thanks to Arkane we were able to build Thorblock faster and make it a user-friendly pooling service with a built-in Vechain wallet.
-        </div>
-        <div class="testimonials-area__testimonial__author">
-          <div class="testimonials-area__testimonial__photo">
-            <img src="{{site.imageurl}}/testimonial-author-jurgen.jpg" alt="Jurgen - Founder SafeHaven">
-          </div>
-          <div class="testimonials-area__testimonial__id">
-            <div class="testimonials-area__testimonial__name">
-              Jurgen
-            </div>
-            <div class="testimonials-area__testimonial__description">
-              Founder Safe Haven
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="testimonials-area__testimonial">
-      <div class="testimonials-area__testimonial__content">
-        <div class="testimonials-area__testimonial__text">
-          With Arkane we can build blockchain applications for our enterprise clients without becoming blockchain experts ourselves.
-        </div>
-        <div class="testimonials-area__testimonial__author">
-          <div class="testimonials-area__testimonial__photo">
-            <img src="{{site.imageurl}}/testimonial-author-jan.jpg" alt="Jan - Director In The Pocket">
-          </div>
-          <div class="testimonials-area__testimonial__id">
-            <div class="testimonials-area__testimonial__name">
-              Jan
-            </div>
-            <div class="testimonials-area__testimonial__description">
-              Director In The Pocket
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="testimonials-area__cta">
-      <h2 class="testimonials-area__cta__title">
-        Our customers are satisfied, give Arkane a try!
-      </h2>
-      <a class="btn btn--brand-light testimonials-area__cta__button" href="https://app.arkane.network">
-        Register
-      </a>
     </div>
   </div>
 </section>

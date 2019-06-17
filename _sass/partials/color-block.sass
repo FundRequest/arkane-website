@@ -1,0 +1,130 @@
+.color-block
+  $color-block-blue: #39a4c7
+  $color-block-blue-strip: #82c6dc
+  $color-block-brand: $color-brand
+  $color-block-brand-strip: #e289d2
+  $color-block-width: rem(110px)
+  $color-block-small: rem(32px)
+  $color-block-big: rem(80px)
+
+  color: $color-white
+  text-align: center
+  padding: 0
+
+  &__inner
+    position: relative
+    padding: $color-block-small $color-block-width
+    z-index: 1
+
+  &__bg-helper
+    position: absolute
+
+    &--start,
+    &--end
+      bottom: 0
+
+    &--start
+      left: 0
+
+    &--end
+      right: 0
+
+  &__heading
+    font-size: $color-block-small
+    font-weight: $font-weight-normal
+
+  &__description
+    font-size: $font-size-big
+
+  &__cta
+    border: 1px solid $color-white
+    margin-bottom: rem(24px)
+    display: inline-block
+    width: auto
+
+  &__svg
+    stroke: none
+    position: absolute
+    bottom: 0
+    z-index: 1
+
+  &__svg--lb,
+  &__svg--rb
+    width: $color-block-small
+    height: $color-block-small
+
+  &__svg--lt,
+  &__svg--rt
+    width: $color-block-big
+    height: $color-block-big
+
+  &--blue
+    background-color: $color-block-blue
+    position: relative
+
+    &::after
+      content: ''
+      left: 0
+      right: 0
+      height: $color-block-big - $color-block-small
+      bottom: $color-block-small
+      position: absolute
+      background-color: $color-block-blue-strip
+
+    .color-block
+      &__inner
+        background-color: $color-block-blue
+
+      &__bg-helper
+        position: absolute
+        background-color: $color-block-blue-strip
+        width: $color-block-width
+        height: $color-block-big
+        z-index: 0
+
+      &__svg
+        fill: $color-block-blue
+
+      &__svg--lt,
+      &__svg--lb
+        left: 0
+
+      &__svg--rt,
+      &__svg--rb
+        right: 0
+
+  &--brand
+    background-color: $color-block-brand
+    position: relative
+
+    .color-block
+      &__inner
+        position: relative
+
+        &::after
+          content: ''
+          left: $color-block-width
+          right: $color-block-width
+          height: $color-block-big - $color-block-small
+          bottom: $color-block-small
+          position: absolute
+          background-color: $color-block-brand-strip
+          z-index: -1
+
+      &__bg-helper
+        position: absolute
+        background-color: $color-block-brand-strip
+        width: $color-block-width
+        height: $color-block-big
+        z-index: -1
+
+      &__svg
+        fill: $color-block-brand
+
+      &__svg--lt,
+      &__svg--lb
+        left: 0
+
+      &__svg--rt,
+      &__svg--rb
+        right: 0

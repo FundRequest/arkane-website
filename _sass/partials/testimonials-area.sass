@@ -1,124 +1,183 @@
-.testimonials-area
-  padding: rem(32px) 0
+.tm
+  $tm-blue: #90bfce
+  $tm-blue-strip: #ecf4f7
+  $tm-blue-2: #b8d4dc
+  $tm-width: rem(110px)
+  $tm-small: rem(32px)
+  $tm-big: rem(80px)
+
+  text-align: center
+  padding: 0
+  min-height: rem(340px)
+  background-color: $tm-blue
   position: relative
-  background-image: linear-gradient(to left, $color-brand-dark, $color-bluish)
-  color: $color-white
-  @include media(tablet)
-    padding: rem(90px) 0
 
-  .container
-      @include media(tablet-ls)
-        position: relative
-        &::before,
-        &::after
-          content: ''
-          display: block
-          position: absolute
-          top: rem(-90px)
-          bottom: rem(-93px)
+  &__content
+    position: relative
+    z-index: 1
+    padding: rem(60px 40px)
 
-        &::before
-          width: 100%
-          background: no-repeat url(../img/bg-testimonials.svg) -3px top
-        &::after
-          width: 200%
-          background: $color-white
-          right: 100%
-
-  &__header
-    text-align: center
-
-  &__heading
-    font-weight: $font-weight-normal
-    font-size: $font-size-heading-h1
-    margin-bottom: rem(52px)
+  &__testimonials
+    display: flex
+    justify-content: center
+    flex-wrap: wrap
 
   &__testimonial
-    position: relative
-    z-index: 1
-    @include media(tablet)
-      margin-bottom: rem(30px)
-      grid-column: span 4
-
-    @include media(desktop)
-      margin: 0 rem(50px) rem(60px) rem(50px)
-
-    &__content
-      color: $color-text
-      height: 100%
-      width: 100%
-      padding: rem(20px)
-      padding-left: rem(50px)
-      background-color: $color-white
-      border-radius: rem(6px)
-      box-shadow: 0 0 5px 3px rgba(#3F3F3F, 0.3)
-      display: flex
-      flex-direction: column
-      justify-content: space-between
-
-    &__text
-      padding-top: rem(26px)
-      margin-bottom: rem(40px)
-      position: relative
-      font-size: $font-size-regular
-      &::before,
-      &::after
-        color: $color-bluish
-        font-size: rem(70px)
-        font-family: 'PT Sans', sans-serif
-        height: 0
-
-      &::before
-        content: '“'
-        position: absolute
-        left: rem(-28px)
-        top: rem(-4px)
-
-      &::after
-        content: '”'
-        display: inline-block
-        margin-left: rem(4px)
-        vertical-align: top
+    flex-basis: 28%
+    min-width: rem(280px)
+    margin: rem(0 32px 32px)
+    padding: rem(20px 40px)
+    background-color: $color-white
+    box-shadow: $box-shadow-light
+    color: $color-text-light
 
     &__author
-      display: flex
-      align-items: center
+      margin-bottom: rem(16px)
 
     &__photo
-      flex-grow: 0
-      flex-shrink: 0
-      width: rem(80px)
-      height: rem(80px)
-      border-radius: rem(80px)
+      display: inline-block
+      width: rem(90px)
+      height: rem(90px)
+      border-radius: 9999px
       overflow: hidden
-      margin-right: rem(20px)
+      margin-bottom: rem(16px)
       > img
-        height: 100%
         width: 100%
-
-    &__id
-      color: $color-bluish
-      font-size: $font-size-regular
+        height: 100%
+        object-fit: contain
 
     &__name
-      font-weight: $font-weight-bold
-      margin-bottom: rem(8px)
+      color: $color-brand
+      text-transform: uppercase
 
-    &__description
-      font-weight: $font-weight-500
+  &__bg
+    position: absolute
+    bottom: 0
+    left: 0
+    right: 0
+    top: 0
+    z-index: 0
 
-  &__cta
-    position: relative
-    z-index: 1
-    text-align: center
+    > .container
+      position: relative
+      z-index: 1
+      height: 100%
 
-    &__title
-      font-size: rem(22px)
-      font-weight: $font-weight-400
-      margin-bottom: rem(20px)
+    &__svg
+      position: absolute
 
-    &__button
-      display: inline-block
-      line-height: rem(40px)
-      padding: 0
-      width: rem(200px)
+    &__outer,
+    &__inner
+      position: absolute
+      left: 0
+      right: 0
+      bottom: 0
+      height: rem(340px)
+
+    &__outer
+      z-index: 0
+
+    &__outer__line
+        width: 100%
+        position: absolute
+        &--1
+          bottom: 0
+          background-color: $tm-blue-2
+          height: rem(240px)
+        &--2
+          top: 0
+          background-color: $tm-blue-strip
+          height: rem(60px)
+
+    &__inner
+      background-color: $tm-blue
+
+    &__line
+      position: absolute
+      left: 0
+      right: 0
+
+    &__line--1
+      bottom: 0
+      height: rem(160px)
+      background-color: $color-white
+
+      .tm__bg__svg
+        fill: $tm-blue-2
+        bottom: 0
+        width: rem(160px)
+        height: rem(160px)
+
+        &--lt
+          left: 0
+          bottom: 0
+
+        &--rt
+          right: 0
+          bottom: 0
+
+    &__line--2
+      height: rem(140px)
+      top: 0
+
+      .tm__bg
+        &__start,
+        &__middle,
+        &__end
+          position: absolute
+          background-color: $tm-blue-strip
+
+        &__middle
+          bottom: 0
+          left: rem(120px)
+          right: rem(120px)
+          height: rem(60px)
+
+        &__start,
+        &__end
+          top: 0
+          width: rem(120px)
+          height: rem(140px)
+
+
+        &__start
+          left: 0
+
+        &__end
+          right: 0
+
+        &__svg
+          fill: $tm-blue
+          width: rem(80px)
+          height: rem(80px)
+          &--lb
+            left: 0
+            bottom: 0
+          &--rt
+            right: 0
+            top: 0
+          &--rb
+            right: 0
+            bottom: 0
+          &--lt
+            left: 0
+            top: 0
+
+    &__line--3
+      bottom: rem(160px)
+      height: rem(80px)
+
+      .tm__bg__svg
+        fill: $tm-blue-2
+        bottom: 0
+        width: rem(80px)
+        height: rem(80px)
+
+        &--lb
+          left: 0
+          bottom: 0
+
+        &--rb
+          right: 0
+          bottom: 0
+

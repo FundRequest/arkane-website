@@ -23,8 +23,8 @@
     <style>
       .text {
         font-size: 29px;
-        stroke: #f74989;
-        fill: #f74989;
+        stroke: #636363;
+        fill: #636363;
         stroke-miterlimit: 10;
         stroke-width: 0.25px;
         font-family: HelveticaNeue-Thin, Helvetica Neue;

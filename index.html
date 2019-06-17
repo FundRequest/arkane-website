@@ -17,20 +17,16 @@ page: index
 <![endif]-->
 
 {% include fragments/navigation-mobile.html %}
-<div class="bg" data-page-bg="{{site.imgurl}}/bg-homepage-large.png"></div>
-<div class="bg-big" data-page-bg-big="true"></div>
 
 <div class="page-wrapper">
   {% include fragments/video/wrapper.html video='fragments/video/home.html' %}
   {% include homepage/header.html %}
-  {% include homepage/info-area.html title='Why Arkane' %}
-  {% include homepage/how-area.html title='How does it work' %}
-  {% include homepage/connecting-area.html title='Arkane connects the crypto landscape' %}
-  {% include homepage/connect-arkane-area.html title='Connect Arkane with' %}
+  {% include homepage/trusted-area.html %}
+  {% include fragments/banner1.html title="We support you in exploring the wonderful world of blockchain" description="through an easy to use interface, packed with powerful features. And via our online support, a helping hand is always nearby." %}
+  {% include homepage/info-area.html %}
+  {% include fragments/banner2.html title="All of your digital assets in one place" description="One account for all of your assets, across all devices" ctaText="Sign up" ctaLink="https://todo" %}
+  {% include homepage/partners.html %}
   {% include homepage/testimonials-area.html title='Customers testimonials' %}
-  {% include homepage/use-cases-area.html title='Use cases' %}
-  {% comment %}{% include homepage/rewards-area.html %}{% endcomment %}
-  {% comment %}{% include homepage/keep-in-touch-area.html cta='brand-light' %}{% endcomment %}
   {% include footer.html %}
   {% include scripts.html %}
 </div>

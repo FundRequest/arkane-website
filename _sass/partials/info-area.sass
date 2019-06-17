@@ -1,118 +1,58 @@
 .info-area
-  padding: rem(32px) 0
-  background-color: $color-bg-grey
-  @include media(tablet)
-    background-color: transparent
 
-  &__header
-    text-align: center
-    color: $color-text
+  .icon-chart-network
+    transform: rotate(90deg)
 
-  &__heading
-    font-weight: $font-weight-normal
-    font-size: $font-size-heading-h1
-    margin-bottom: rem(72px)
-
-  &__infographic
-    margin-bottom: rem(28px)
-    .icon-arkane
-      fill: $color-brand-dark
-      width: rem(80px)
-      height: rem(60px)
-
-  &__arkane
-    display: flex
-    justify-content: center
-    margin-bottom: rem(24px)
-    padding: rem(20px)
-
-    &__description
-      margin-bottom: rem(92px)
-      font-size: $font-size-big
-      text-align: center
-      @include media(tablet)
-        margin-left: auto
-        margin-right: auto
-        max-width: 50%
-
-  &__strokes
-    margin-bottom: rem(33px)
-    @include media(tablet)
-      margin-bottom: rem(16px)
-
-    &__top, &__bottom
-      display: flex
-      justify-items: center
-
-    &__top
-      height: rem(16px)
-      width: 100%
-      &::after, &::before
-        content: ''
-        flex: 1
-      &::before
-        border-right: 2px dashed $color-brand-dark
-
-  &__stroke
-    &-left, &-right
-      flex: 1
-      @include media(tablet)
-        flex: 5
-      @include media(desktop)
-        flex: 2
-    &-middle
-      height: rem(16px)
-      border: 2px dashed $color-brand-dark
-      border-bottom: 0 none
-      flex: 8
-      @include media(tablet)
-        flex: 20
-      @include media(desktop)
-        flex: 16
+  .icon-circle-notch
+    transform: rotate(25deg)
 
   &__items
     display: flex
-    justify-content: flex-start
-    justify-items: center
-    flex-wrap: wrap
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    padding: rem(32px)
     @include media(tablet)
-      justify-content: center
-    @include media(desktop)
-      flex-wrap: nowrap
+      padding: rem(100px 0px 100px 32px)
 
   &__item
-    text-align: center
-    padding: 0 rem(12px)
-    width: 50%
-    margin-bottom: rem(40px)
-
+    display: flex
+    justify-content: center
+    margin-bottom: rem(32px)
     @include media(tablet)
-      padding: 0 rem(16px)
-      margin-bottom: rem(24px)
-      width: 33.333333%
-    @include media(desktop)
-      padding: 0 rem(32px)
-      width: auto
-      flex: 1
+      margin-bottom: rem(80px)
+      max-width: rem(900px)
 
     &__icon
-      margin-bottom: rem(16px)
+      width: rem(48px)
+      margin-right: rem(16px)
+      @include media(tablet)
+        width: rem(120px)
+        margin-right: rem(120px)
+
       .icon
-        fill: $color-brand-dark
-        stroke: $color-brand-dark
+        fill: $color-brand
+        stroke: $color-brand
         stroke-width: 1px
-        height: rem(60px)
-        width: rem(60px)
+        height: rem(48px)
+        width: rem(48px)
+        @include media(tablet)
+          height: rem(120px)
+          width: rem(120px)
 
     &__title
-      color: $color-brand-dark
-      font-size: $font-size-regular
-      font-weight: $font-weight-500
-      margin-bottom: rem(4px)
-
+      font-weight: $font-weight-normal
+      margin-top: rem(4px)
+      margin-bottom: rem(12px)
       @include media(tablet)
-        color: $color-text
+        margin-top: 0
+        margin-bottom: rem(32px)
+
 
     &__text
       font-size: $font-size-regular
+      margin: 0
+      @include media(tablet)
+        font-size: rem(19px)
+        line-height: rem(32px)
 

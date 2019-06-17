@@ -11,12 +11,14 @@
       var src = $bg.attr('data-page-bg');
       var $bgBig = $('[data-page-bg-big]');
 
-      $('<img>').attr('src', src).on('load', function() {
+      var $image = $('<img>').attr('src', src);
+      var image = $image[0];
+      image.addEventListener('load', function() {
         $bgBig.css('background-image', 'url("' + src + '")');
         $bg.addClass('fadeOut');
         $bgBig.addClass('fadeIn');
       });
-
+      setTimeout(() => console.log('image', image.complete, image.src), 500);
     });
   }
 
@@ -35,7 +37,7 @@
   function initPageVideo() {
     var stream = document.querySelector('.page-video stream');
     var $body = $('body');
-    if(stream !== null && typeof stream !== 'undefined' && typeof stream.play === 'function') {
+    if (stream !== null && typeof stream !== 'undefined' && typeof stream.play === 'function') {
       $bus.on('page-video-show', function() {
         $body.addClass('page-video-visible');
       });
@@ -65,14 +67,14 @@
 
       document.addEventListener('keyup', function(e) {
         if (e.key === 'Escape') {
-          if($body.hasClass('page-video-visible')) {
+          if ($body.hasClass('page-video-visible')) {
             $bus.trigger('page-video-pause');
             $bus.trigger('page-video-hide');
           }
         }
         if (e.key === ' ') {
-          if($body.hasClass('page-video-visible')) {
-            if(stream.paused) {
+          if ($body.hasClass('page-video-visible')) {
+            if (stream.paused) {
               $bus.trigger('page-video-play');
             } else {
               $bus.trigger('page-video-pause');

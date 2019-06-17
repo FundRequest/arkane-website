@@ -1,11 +1,17 @@
-<div class="info-area__item">
+<article class="info-area__item">
   <div class="info-area__item__icon">
-    <svg class="icon icon-{{ include.icon }}"><use xlink:href="#icon-{{ include.icon }}"></use></svg>
+    <svg class="icon icon-{{ include.icon }}">
+      <use xlink:href="#icon-{{ include.icon }}"></use>
+    </svg>
   </div>
-  <div class="info-area__item__title">
-    {{ include.title }}
+  <div>
+    <header>
+      <h1 class="info-area__item__title">
+        {{ include.title }}
+      </h1>
+    </header>
+    <p class="info-area__item__text">
+      {{ include.description }}
+    </p>
   </div>
-  <div class="info-area__item__text">
-    {{ include.description }}
-  </div>
-</div>
+</article>

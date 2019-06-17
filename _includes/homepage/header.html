@@ -2,12 +2,16 @@
 <header class="header header--home" id="header">
   <div class="container">
     {% include fragments/navigation.html %}
-    <div class="header__image__container">
+    {% include homepage/fragments/intro.html cta='secondary' %}
+
+    <div class="intro-right header__image__container">
+      <div class="header__image__bg" data-page-bg="{{site.imgurl}}/visual-arkane-big.png"></div>
+      <div class="header__image__bg-big" data-page-bg-big="true"></div>
       <img class="header__image" src="{{site.imgurl}}/visual-arkane.png" alt="arkane crypto wallet"/>
       <div class="header__play-button">
         {% include fragments/video/page-video-play-button.html %}
       </div>
     </div>
-    {% include homepage/fragments/intro.html cta='secondary' %}
+
   </div>
 </header>
