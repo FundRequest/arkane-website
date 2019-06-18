@@ -1,0 +1,54 @@
+.mac-window
+  border-radius: $border-radius
+  background-color: #202c3d
+  position: relative
+  padding-top: rem(24px)
+  overflow: hidden
+
+  &__bar
+    background-color: #1a2431
+    height: rem(24px)
+    padding: rem(4px 8px)
+    position: absolute
+    top: 0
+    right: 0
+    width: 100%
+    white-space: nowrap
+    text-align: left
+
+    &__button
+      margin-right: rem(4px)
+      width: rem(12px)
+      height: rem(12px)
+      display: inline-block
+      border-radius: rem(12px)
+      &:first-child
+        background-color: #fb605b
+      &:nth-child(2)
+        background-color: #fdba3f
+      &:nth-child(3)
+        background-color: #35c748
+
+  &__content
+    padding: rem(20px)
+
+  &__code
+    color: $color-white
+    text-align: left
+    font-size: $font-size-small
+    white-space: pre-wrap
+    word-wrap: break-word
+    font-family: monospace
+
+    .k
+      color: #b875b0
+
+    .s
+      color: #829e6e
+
+    .f
+      color: #d0cc28
+
+    .v
+      color: #c06f4e
+

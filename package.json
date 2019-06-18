@@ -20,9 +20,6 @@
     "run": "bundle exec jekyll serve"
   },
   "dependencies": {
-    "jquery": "^3.4.0",
-    "modernizr": "^3.7.0",
-    "normalize.css": "^8.0.0",
-    "npm": "^6.8.0"
+    "npm": "^6.9.0"
   }
 }

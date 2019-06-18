@@ -1,9 +1,10 @@
 'use strict';
 
 var debug = false;
-var version = 'v3::';
+var version = 'v1::3';
 var offlineFundamentals = [
   '',
+  '/site.webmanifest',
   '/favicon.ico',
   '/index.html',
   '/pages/build-on-arkane.html',
@@ -11,7 +12,6 @@ var offlineFundamentals = [
   '/assets/css/main.css',
   '/assets/css/terms.css',
   '/assets/img',
-  '/assets/js/plugins.js',
   '/assets/js/main.js',
 ];
 

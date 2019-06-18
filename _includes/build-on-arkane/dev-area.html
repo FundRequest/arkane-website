@@ -1,0 +1,39 @@
+<section class="dev-area" id="dev-area">
+  <div class="container">
+    <div class="dev-area__content">
+      <header class="dev-area__header">
+        <h1 class="dev-area__heading">
+          Strong, yet simple to use
+        </h1>
+        <div class="dev-area__intro">
+          With just a few lines of code your users will have the option of
+          securing their digital assets via owning a blockchain wallet
+          without leaving your platform. We take care of all the nitty gritty
+          blockchain requirements so you can focus on your core business.
+        </div>
+      </header>
+      <div class="dev-area__code">
+        <div class="mac-window">
+          <div class="mac-window__bar">
+            <div class="mac-window__bar__button"></div>
+            <div class="mac-window__bar__button"></div>
+            <div class="mac-window__bar__button"></div>
+          </div>
+          <div class="mac-window__content">
+
+            <div class="mac-window__code"><span class="k">import</span> ( ArkaneConnect ) <span class="k">from</span> <span class="s">'@arkane-network/arkane-connect'</span><span class="k">;</span>
+
+<span class="k">const</span> arkaneConnect = <span class="k">new</span> ArkaneConnect(<span class="s">'APP_CLIENT_ID'</span>)<span class="k">;</span>
+
+arkaneConnect.flows.<span class="f">getAccount</span>(<span class="s">'ETHEREUM'</span>).<span class="f">then</span>((account) => {
+  <span class="k">if</span> (account.<span class="v">isAuthenticated</span>) {
+    console.<span class="f">log</span>(<span class="s">'wallets'</span>, account.wallets)<span class="k">;</span>
+  }
+})<span class="k">;</span></div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

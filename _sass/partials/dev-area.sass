@@ -1,0 +1,35 @@
+.dev-area
+  background-color: #e289d2
+  position: relative
+  padding: rem(40px 0 20px)
+  @include media(desktop)
+    padding: rem(60px 0 40px)
+
+  &__heading
+    margin-top: 0
+    margin-bottom: rem(12px)
+    font-size: rem(32px)
+    @include media(desktop)
+      font-size: $font-size-heading-h1
+
+  &__intro
+    font-size: $font-size-big
+
+  &__code
+    padding-top: rem(8px)
+
+  &__content
+    text-align: center
+    > *
+      margin-bottom: rem(32px)
+
+    @include media(tablet-ls)
+      text-align: left
+      display: flex
+      justify-content: space-between
+      align-items: center
+      margin: 0 rem(-60px)
+      > *
+        flex: 1 1 0
+        margin: rem(32px 60px)
+
