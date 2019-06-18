@@ -1,17 +1,15 @@
 <article class="info-area__item">
-  <div class="info-area__item__icon">
-    <svg class="icon icon-{{ include.icon }}">
-      <use xlink:href="#icon-{{ include.icon }}"></use>
-    </svg>
-  </div>
-  <div>
-    <header>
-      <h1 class="info-area__item__title">
-        {{ include.title }}
-      </h1>
-    </header>
-    <p class="info-area__item__text">
-      {{ include.description }}
-    </p>
-  </div>
+  <header class="info-area__item__header">
+    <div class="info-area__item__icon">
+      <svg class="icon icon-{{ include.icon }}">
+        <use xlink:href="#icon-{{ include.icon }}"></use>
+      </svg>
+    </div>
+    <h1 class="info-area__item__title">
+      {{ include.title }}
+    </h1>
+  </header>
+  <p class="info-area__item__text">
+    {{ include.description }}
+  </p>
 </article>

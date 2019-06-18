@@ -11,9 +11,22 @@
   text-align: center
   padding: 0
 
-  &__inner
+  > .container
     position: relative
-    padding: $color-block-small $color-block-width
+
+  &__content
+    position: relative
+    z-index: 2
+    padding: rem(32px 0)
+    @include media(tablet)
+      padding: $color-block-small $color-block-width
+
+  &__bg
+    position: absolute
+    top: 0
+    right: 0
+    left: 0
+    bottom: 0
     z-index: 1
 
   &__bg-helper
@@ -72,7 +85,7 @@
       background-color: $color-block-blue-strip
 
     .color-block
-      &__inner
+      &__bg
         background-color: $color-block-blue
 
       &__bg-helper
@@ -98,10 +111,7 @@
     position: relative
 
     .color-block
-      &__inner
-        position: relative
-
-        &::after
+      &__bg::after
           content: ''
           left: $color-block-width
           right: $color-block-width

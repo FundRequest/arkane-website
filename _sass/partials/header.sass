@@ -2,23 +2,13 @@
   position: relative
   overflow: hidden
   padding-top: rem(50px)
+  margin-bottom: rem(32px)
   @include media(tablet)
     padding-top: 0
-    margin-bottom: rem(192px)
 
   .container
     position: relative
     z-index: 1
-
-  .header__image
-    &__bg
-      @include media(tablet)
-        opacity: 1
-
-  &--home
-    .header__image__bg
-        @include media(tablet)
-          background-image: url(../img/visual-arkane.png)
 
   &--dev
     margin-bottom: rem(80px)
@@ -28,11 +18,6 @@
 
     @include curvesHeader()
 
-    .header__image
-      &__bg
-        @include media(tablet)
-          background-image: url(../img/visual-dev-blur.png)
-
   &__image
     width: 100%
     max-width: rem(280px)
@@ -40,35 +25,13 @@
     @include media(tablet)
       max-width: none
       width: 100%
-      height: auto
-      opacity: 0
-
-    &__bg, &__bg-big
-      display: none
-      @include media(tablet)
-        position: absolute
-        display: block
-        left: 0
-        right: 0
-        top: 0
-        bottom: 0
-        background-size: contain
-        background-position: center center
-        background-repeat: no-repeat
-
-    &__bg.fadeOut
-      @include media(tablet)
-        animation: fadeout 2s forwards
-        animation-delay: 1s
-
-    &__bg-big.fadeIn
-      @include media(tablet)
-        animation: fadein 2s forwards
+      height: 100%
 
     &__container
       text-align: center
       padding: 0 rem(40px)
       position: relative
+      display: flex
       @include media(tablet)
         padding: 0
         height: 100%
@@ -126,16 +89,16 @@
   grid-column-start: 1
   grid-column-end: span 12
   @include media(tablet)
-    grid-column-end: span 6
+    grid-column-end: span 7
     margin: rem(40px 0)
   @include media(tablet-ls)
-    grid-column-end: span 5
+    grid-column-end: span 6
     margin: rem(20px 0)
   @include media(desktop)
-    grid-column-end: span 4
+    grid-column-end: span 5
     margin: rem(40px) 0 0 0
   @include media(wide)
-    grid-column-end: span 5
+    grid-column-end: span 6
 
   &__title
     color: $color-text
@@ -146,34 +109,11 @@
     margin-bottom: rem(40px)
     font-size: $font-size-big
 
-  &--dev
-    @include media(tablet)
-      text-align: right
-      grid-column-start: 7
-      margin: rem(60px) 0
-      .intro__description
-        text-align: right
-    @include media(tablet-ls)
-      grid-column-start: 8
-      margin: rem(100px) 0
-    @include media(desktop)
-      grid-column-start: 9
-      margin: rem(120px) 0
-    @include media(wide)
-      grid-column-start: 8
-      margin: rem(180px) 0
-
 .intro-right
   grid-column-start: 1
   grid-column-end: span 12
   position: relative
   @include media(tablet)
-    grid-column-start: 9
-    grid-column-end: span 4
-  @include media(tablet-ls)
-    grid-column-start: 10
-    grid-column-end: span 3
-  @include media(desktop)
     grid-column-start: 8
     grid-column-end: span 5
 

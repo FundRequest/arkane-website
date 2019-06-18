@@ -5,12 +5,13 @@
     {% include homepage/fragments/intro.html cta='secondary' %}
 
     <div class="intro-right header__image__container">
-      <div class="header__image__bg" data-page-bg="{{site.imgurl}}/visual-arkane-big.png"></div>
-      <div class="header__image__bg-big" data-page-bg-big="true"></div>
-      <img class="header__image" src="{{site.imgurl}}/visual-arkane.png" alt="arkane crypto wallet"/>
-      <div class="header__play-button">
-        {% include fragments/video/page-video-play-button.html %}
-      </div>
+      <svg class="header__image">
+        <use xlink:href="#image-header-homepage"></use>
+      </svg>
+<!--      <img class="header__image" src="{{site.imgurl}}/homepage/arkane-visual-homepage.svg" alt="arkane crypto wallet"/>-->
+<!--      <div class="header__play-button">-->
+<!--        {% include fragments/video/page-video-play-button.html %}-->
+<!--      </div>-->
     </div>
 
   </div>

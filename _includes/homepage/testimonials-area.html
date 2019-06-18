@@ -51,68 +51,31 @@
         <h1 class="tm__heading">
           Testimonials
         </h1>
+        <div class="tm__intro">
+          What our clients say about Arkane
+        </div>
       </header>
 
-      <div class="tm__testimonials">
-        <div class="tm__testimonial">
-          <div class="tm__testimonial__content">
-            <div class="tm__testimonial__author">
-              <div class="tm__testimonial__photo">
-                <img src="{{site.imageurl}}/testimonial-author-jurgen.jpg" alt="Jurgen - CTO & Founder @ SafeHaven">
-              </div>
-              <div class="tm__testimonial__id">
-                <div class="tm__testimonial__name">
-                  Jurgen Schouppe
-                </div>
-                <div class="tm__testimonial__description">
-                  CTO @ Safe Haven
-                </div>
-              </div>
-            </div>
-            <div class="tm__testimonial__text">
-              Thanks to Arkane we were able to build Thorblock faster and make it a user-friendly pooling service with a built-in Vechain wallet.
-            </div>
-          </div>
-        </div>
-        <div class="tm__testimonial">
-          <div class="tm__testimonial__content">
-            <div class="tm__testimonial__author">
-              <div class="tm__testimonial__photo">
-                <img src="{{site.imageurl}}/testimonial-author-narek.jpg" alt="Narek - CEO & Founder @ Coin Stats">
-              </div>
-              <div class="tm__testimonial__id">
-                <div class="tm__testimonial__name">
-                  Narek Gevorgyan
-                </div>
-                <div class="tm__testimonial__description">
-                  CEO @ CoinStats
-                </div>
-              </div>
-            </div>
-            <div class="tm__testimonial__text">
-              Arkane solves a real problem and gives me fresh insights to build more useful features on top of Coin Stats.
-            </div>
-          </div>
-        </div>
-        <div class="tm__testimonial">
-          <div class="tm__testimonial__content">
-            <div class="tm__testimonial__author">
-              <div class="tm__testimonial__photo">
-                <img src="{{site.imageurl}}/testimonial-author-jan.jpg" alt="Jan - Director In The Pocket">
-              </div>
-              <div class="tm__testimonial__id">
-                <div class="tm__testimonial__name">
-                  Jan Deruyck
-                </div>
-                <div class="tm__testimonial__description">
-                  Director @ In The Pocket
-                </div>
-              </div>
-            </div>
-            <div class="tm__testimonial__text">
-              With Arkane we can build blockchain applications for our enterprise clients without becoming blockchain experts ourselves.
-            </div>
-          </div>
+      <div class="tm__scroll">
+        <div class="tm__testimonials">
+          {% include fragments/testimonial.html
+             image="testimonial-author-jurgen.jpg"
+             name="Jurgen Schouppe"
+             description="CTO @ Safe Haven"
+             text="Thanks to Arkane we were able to build Thorblock faster and make it a user-friendly pooling service with a built-in Vechain wallet."
+          %}
+          {% include fragments/testimonial.html
+             image="testimonial-author-narek.jpg"
+             name="Narek Gevorgyan"
+             description="CEO @ CoinStats"
+             text="Arkane solves a real problem and gives me fresh insights to build more useful features on top of Coin Stats."
+          %}
+          {% include fragments/testimonial.html
+             image="testimonial-author-jan.jpg"
+             name="Jan Deruyck"
+             description="Director @ In The Pocket"
+             text="With Arkane we can build blockchain applications for our enterprise clients without becoming blockchain experts ourselves."
+          %}
         </div>
       </div>
     </div>

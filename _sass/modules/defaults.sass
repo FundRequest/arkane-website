@@ -27,9 +27,21 @@ a
   text-decoration: none
   color: $color-link-default
 
+
+h1
+  font-size: rem(28px)
+  font-weight: $font-weight-normal
+  line-height: rem(36px)
+  @include media(tablet)
+    font-size: $font-size-heading-h1
+    line-height: rem(56px)
+
 h2
   font-size: $font-size-big
+  font-weight: $font-weight-normal
   line-height: $line-height-big
+
+
 
 .sr-only
   @include sr-only

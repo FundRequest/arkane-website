@@ -10,9 +10,9 @@
 .logo, .logo__small
   display: block
   height: rem(42px)
-  img
+  svg
     height: 100%
-    width: auto
+    width: 100%
 
 .logo
   display: none
@@ -31,6 +31,8 @@
     flex-direction: column
     @include media(tablet)
       flex-direction: row
+      align-items: center
+      text-align: center
       justify-content: flex-end
 
     &-item
@@ -54,4 +56,8 @@
         &:hover, &:active,
         &--active
           color: $color-brand
+
+        > span
+          display: block
+          line-height: 1.2
 

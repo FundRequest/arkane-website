@@ -1,6 +1,38 @@
 .partners-area
   text-align: center
-  padding: rem(60px 0 80px 0)
+  padding: rem(32px 0 0)
+  @include media(tablet)
+    padding: rem(60px 0 80px 0)
+
+  > .container
+    padding: 0
+    position: relative
+
+    @include media(tablet)
+      padding: $container-padding
+
+    @include media(desktop)
+      padding: $container-padding-desktop
+
+    &::before,
+    &::after
+      content: ''
+      position: absolute
+      display: block
+      width: rem(48px)
+      top: 0
+      bottom: 0
+      @include media(tablet)
+        display: none
+
+    &::before
+      left: 0
+      background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%)
+
+    &::after
+      right: 0
+      background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%)
+
 
   &__heading
     font-weight: $font-weight-normal
@@ -9,17 +41,40 @@
     @include media(tablet)
       margin-bottom: rem(40px)
 
+  &__partners
+    padding: rem(0 0 16px 0)
+    margin: 0
+    overflow: auto
+    white-space: nowrap
+
   &__items
     list-style: none
-    display: flex
-    flex-wrap: wrap
-    justify-content: center
-    align-items: center
-    padding: 0
+    padding: rem(16px 0)
     margin: 0
+    white-space: nowrap
+    display: inline-block
+    @include media(tablet)
+      padding-bottom: 0
+      display: flex
+      justify-content: center
+      align-items: center
+      flex-wrap: wrap
 
   &__item
-    padding: rem(12px 16px)
+    display: inline-block
+    padding: rem(12px 8px)
+    @include media(tablet)
+      padding: rem(12px 16px)
+
+    &:first-child
+      margin-left: rem(16px)
+      @include media(tablet)
+        margin-left: 0
+
+    &:last-child
+      margin-right: rem(16px)
+      @include media(tablet)
+        margin-right: 0
 
   &__image
     height: rem(32px)

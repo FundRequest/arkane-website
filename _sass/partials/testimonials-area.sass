@@ -12,24 +12,52 @@
   background-color: $tm-blue
   position: relative
 
+  &__heading
+    margin-top: 0
+    margin-bottom: rem(12px)
+
+  &__intro
+    margin-bottom: rem(32px)
+    font-size: $font-size-big
+    @include media(tablet)
+      margin-bottom: rem(60px)
+
   &__content
     position: relative
     z-index: 1
-    padding: rem(60px 40px)
+    padding: rem(32px 0)
+    @include media(desktop)
+      padding: rem(60px 40px)
+
+  &__scroll
+    overflow: auto
+    margin-left: rem(-20px)
+    margin-right: rem(-20px)
 
   &__testimonials
     display: flex
-    justify-content: center
-    flex-wrap: wrap
+    &::before,
+    &::after
+      content: ''
+      padding: rem(8px)
+      display: block
+    @include media(tablet)
+      padding: rem(16px)
+    @include media(desktop)
+      justify-content: center
 
   &__testimonial
-    flex-basis: 28%
+    width: 25%
     min-width: rem(280px)
-    margin: rem(0 32px 32px)
-    padding: rem(20px 40px)
+    margin: rem(0 16px 16px)
+    padding: rem(16px 32px)
     background-color: $color-white
     box-shadow: $box-shadow-light
     color: $color-text-light
+    @include media(desktop)
+      display: block
+      margin: rem(0 32px 32px)
+      padding: rem(20px 40px)
 
     &__author
       margin-bottom: rem(16px)

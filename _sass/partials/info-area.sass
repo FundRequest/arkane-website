@@ -11,24 +11,35 @@
     flex-direction: column
     justify-content: center
     align-items: center
-    padding: rem(32px)
+    padding: rem(32px 0)
     @include media(tablet)
       padding: rem(100px 0px 100px 32px)
 
   &__item
-    display: flex
-    justify-content: center
+    position: relative
+    display: block
     margin-bottom: rem(32px)
     @include media(tablet)
+      padding-left: rem(240px)
       margin-bottom: rem(80px)
       max-width: rem(900px)
+
+    &__header
+      display: flex
+      margin-bottom: rem(12px)
+      align-items: center
+      @include media(tablet)
+        display: block
+        margin-bottom: rem(32px)
 
     &__icon
       width: rem(48px)
       margin-right: rem(16px)
       @include media(tablet)
+        position: absolute
+        left: 0
+        top: 0
         width: rem(120px)
-        margin-right: rem(120px)
 
       .icon
         fill: $color-brand
@@ -41,13 +52,7 @@
           width: rem(120px)
 
     &__title
-      font-weight: $font-weight-normal
-      margin-top: rem(4px)
-      margin-bottom: rem(12px)
-      @include media(tablet)
-        margin-top: 0
-        margin-bottom: rem(32px)
-
+      margin: 0
 
     &__text
       font-size: $font-size-regular

@@ -1,12 +1,17 @@
 <div class="navigation">
   <div class="logo">
-    <a href="/"><img src="{{site.imgurl}}/logo-arkane-animated-light.svg" alt="logo arkane"/></a>
+    <a href="/">
+      <svg>
+        <use width="204" height="42" xlink:href="#image-logo-animated-light"></use>
+      </svg>
+    </a>
   </div>
   <nav class="nav">
     <ul class="nav__list">
-      <li class="nav__list-item"><a class="link link--dark {%if page.page == 'index' %}link--active{%endif%}" href="/">Home</a></li>
-      <li class="nav__list-item"><a class="link link--dark {%if page.page == 'build-on-arkane' %}link--active{%endif%}" href="{{ '/build-on-arkane.html' | prepend: site.pagesurl }}">Developer API/SKD</a></li>
-      <li class="nav__list-item"><a class="link link--dark {%if page.page == 'blog' %}link--active{%endif%}" href="https://medium.com/arkane-network">Blog</a></li>
+      <li class="nav__list-item"><a class="link link--dark {%if page.page == 'index' %}link--active{%endif%}" href="/"><span>Home</span></a></li>
+      <li class="nav__list-item"><a class="link link--dark {%if page.page == 'build-on-arkane' %}link--active{%endif%}"
+                                    href="{{ '/build-on-arkane.html' | prepend: site.pagesurl }}"><span>Developer API/SKD</span></a></li>
+      <li class="nav__list-item"><a class="link link--dark {%if page.page == 'blog' %}link--active{%endif%}" href="https://medium.com/arkane-network"><span>Blog</span></a></li>
       <li class="nav__list-item"><a class="btn btn--brand" href="https://app.arkane.network">Access Wallet</a></li>
     </ul>
   </nav>
