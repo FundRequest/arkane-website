@@ -28,13 +28,16 @@
       display: flex
       margin-bottom: rem(12px)
       align-items: center
+      text-align: center
+      flex-direction: column
       @include media(tablet)
         display: block
+        flex-direction: row
+        text-align: left
         margin-bottom: rem(32px)
 
     &__icon
       width: rem(48px)
-      margin-right: rem(16px)
       @include media(tablet)
         position: absolute
         left: 0

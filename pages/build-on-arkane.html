@@ -17,13 +17,16 @@ page: build-on-arkane
 <![endif]-->
 
 {% include fragments/navigation-mobile.html %}
+
 <div class="page-wrapper">
-  {% include fragments/video/wrapper.html video='fragments/video/developer.html' %}
+  {% comment %}{% include fragments/video/wrapper.html video='fragments/video/developer.html' %}{% endcomment %}
   {% include build-on-arkane/header.html %}
+  {% include fragments/trusted-area.html %}
+  {% include fragments/banner1.html title="We support you in exploring the wonderful world of blockchain" description="through an easy to use interface, packed with powerful features. And via our online support, a helping hand is always nearby." %}
   {% include build-on-arkane/info-area.html %}
-  {% include build-on-arkane/api-area.html %}
-  {% include build-on-arkane/request-area.html %}
-  {% comment %}{% include build-on-arkane/use-cases-area.html title="Use cases" %}{% endcomment %}
+  {% include fragments/banner2.html title="Try our Quick Starts" description="Want to get started immediately? Check out our Quick Start guides." ctaText="Go to Quick Starts up" ctaLink="https://docs.arkane.network/" %}
+  {% include fragments/partners.html %}
+  {% include build-on-arkane/testimonials-area.html title='Customers testimonials' %}
   {% include footer.html %}
   {% include scripts.html %}
 </div>

@@ -1,15 +1,15 @@
-{% include fragments/symbols.html %}
-<header class="header header--dev" id="header">
+{% include fragments/symbols-general.html %}
+{% include fragments/symbols-developer.html %}
+<header class="header" id="header">
   <div class="container">
     {% include fragments/navigation.html %}
-    <div class="header__image__container">
-      <div class="header__image__bg" data-page-bg="{{site.imgurl}}/visual-dev.png"></div>
-      <div class="header__image__bg-big" data-page-bg-big="true"></div>
-      <img class="header__image" src="{{site.imgurl}}/visual-dev-small.png" alt="arkane crypto wallet"/>
-      <div class="header__play-button">
-        {% include fragments/video/page-video-play-button.html %}
-      </div>
-    </div>
     {% include build-on-arkane/fragments/intro.html %}
+
+    <div class="intro-right header__image__container">
+      <svg class="header__image">
+        <use xlink:href="#image-header-developer"></use>
+      </svg>
+    </div>
+
   </div>
 </header>

@@ -3,9 +3,9 @@
   $color-block-blue-strip: #82c6dc
   $color-block-brand: $color-brand
   $color-block-brand-strip: #e289d2
-  $color-block-width: rem(110px)
-  $color-block-small: rem(32px)
-  $color-block-big: rem(80px)
+  $color-block-width: 110px
+  $color-block-small: 32px
+  $color-block-big: 80px
 
   color: $color-white
   text-align: center
@@ -28,6 +28,7 @@
     left: 0
     bottom: 0
     z-index: 1
+    overflow: hidden
 
   &__bg-helper
     position: absolute
@@ -37,10 +38,10 @@
       bottom: 0
 
     &--start
-      left: 0
+      left: -1px
 
     &--end
-      right: 0
+      right: -1px
 
   &__heading
     font-size: $color-block-small
@@ -113,8 +114,8 @@
     .color-block
       &__bg::after
           content: ''
-          left: $color-block-width
-          right: $color-block-width
+          left: $color-block-width - 2px
+          right: $color-block-width - 2px
           height: $color-block-big - $color-block-small
           bottom: $color-block-small
           position: absolute

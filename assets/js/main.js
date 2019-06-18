@@ -69,7 +69,6 @@
   // }
 
   $(function() {
-    replacePageBg();
     initMobileMenu();
     // initPageVideo();
   });
