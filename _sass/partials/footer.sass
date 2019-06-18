@@ -8,20 +8,22 @@
     height: rem(36px)
     @include media(tablet)
       height: rem(68px)
+      width: rem(80px)
       margin-bottom: rem(16px)
 
-  &__title
-    display: block
-    width: 100%
-    margin-bottom: rem(48px)
-    @include media(tablet)
-      text-align: center
-    @include media(desktop)
-      display: none
+  //&__title
+  //  display: block
+  //  width: 100%
+  //  margin-bottom: rem(48px)
+  //  @include media(tablet)
+  //    text-align: center
+  //  @include media(desktop)
+  //    display: none
 
   &__contact-details
     strong
       margin-bottom: rem(16px)
+
     p
       font-size: $font-size-small
       margin: rem(4px) 0
@@ -38,12 +40,11 @@
     display: flex
     margin: 0 auto
     text-align: left
-    justify-content: flex-start
+    justify-content: center
     flex-wrap: wrap
     @include media(tablet)
       width: 100%
       display: flex
-      justify-content: center
       align-items: stretch
 
   &__section
@@ -59,7 +60,7 @@
     @include media(desktop)
       text-align: left
       width: 100%
-      flex: 1
+      flex: 1 1 0
 
     &--social
       width: 100%
@@ -71,20 +72,27 @@
       @include media(desktop)
         display: block
 
+    &__content
+      width: 100%
+
     &__title
-      line-height: rem(36px)
+      line-height: rem(12px)
       font-weight: $font-weight-bold
 
     &__description
-      margin: 0
-      line-height: rem(36px)
+      margin: rem(24px 0 12px)
+      line-height: rem(16px)
 
     &__links
       list-style: none
       padding-left: 0
 
     &__link
-      margin-bottom: rem(12px)
+      margin: 0
+      > a
+        display: block
+        line-height: rem(12px)
+        padding: rem(12px 0)
 
   .link--social
     margin: 0 rem(6px)
@@ -96,8 +104,10 @@
     align-items: center
     border-radius: 9999px
     background-color: $color-text
+
     &:hover
       box-shadow: $box-shadow-dark
+
     @include media(desktop)
       margin: 0 rem(12px) 0 0
 

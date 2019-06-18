@@ -10,14 +10,6 @@
     position: relative
     z-index: 1
 
-  &--dev
-    margin-bottom: rem(80px)
-
-    @include media(tablet-ls)
-      background-image: linear-gradient(to right, #C9ACC9, #fbc2d7)
-
-    @include curvesHeader()
-
   &__image
     width: 100%
     max-width: rem(280px)
@@ -40,50 +32,22 @@
         > img
           height: 100%
 
-  &__cta
-    color: $color-text
-    display: block
-    line-height: rem(32px)
-    margin-bottom: rem(32px)
-
-    .link
-      color: $color-text
-      text-decoration: underline
-
-    &__content
-      display: flex
-      align-items: center
-
-      .icon-chrome
-        margin-right: rem(16px)
-        height: rem(36px)
-        width: rem(36px)
-        @include media(tablet)
-          height: rem(50px)
-          width: rem(50px)
-
-      &--right
-        flex-direction: row-reverse
-        .icon-chrome
-          margin-left: rem(16px)
-          margin-right: 0
-
   &__next
     display: none
 
 
-.page-play-button
-  position: absolute
-  left: 50%
-  top: 50%
-  transform: translate(-50%, -50%)
-  width: rem(75px)
-  height: rem(75px)
-  display: block
-  .icon
-    width: 100%
-    height: 100%
-    filter: drop-shadow($drop-shadow-dark)
+//.page-play-button
+//  position: absolute
+//  left: 50%
+//  top: 50%
+//  transform: translate(-50%, -50%)
+//  width: rem(75px)
+//  height: rem(75px)
+//  display: block
+//  .icon
+//    width: 100%
+//    height: 100%
+//    filter: drop-shadow($drop-shadow-dark)
 
 .intro
   grid-column-start: 1

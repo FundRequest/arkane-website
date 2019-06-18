@@ -1,4 +1,3 @@
-
 <meta charset="utf-8">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 <title>Arkane.Network | {{ page.title }}</title>
@@ -6,16 +5,19 @@
 <meta name="keywords" content="{% if page.keywords %}{{ page.keywords | strip_html | strip_newlines }}{% else %}{{ site.keywords }}{% endif %}">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+<meta name="theme-color" content="#000000">
+<link rel="manifest" href="/site.webmanifest?{{site.time | date: '%s%N'}}">
 <link rel="apple-touch-icon" href="/icon.png?{{site.time | date: '%s%N'}}">
 <link rel="shortcut icon" href="/favicon.ico?{{site.time | date: '%s%N'}}" type="image/x-icon" sizes="16x16 24x24 32x32 64x64"/>
 
-
 {% if page.page == 'terms-and-conditions-raw' %}
   <meta name="robots" content="noindex, nofollow">
+  <link rel="preload" href="{{site.cssurl}}/terms.css?{{site.time | date: '%s%N'}}" as="style">
   <link rel="stylesheet" href="{{site.cssurl}}/terms.css?{{site.time | date: '%s%N'}}">
 {% else %}
+  <link rel="preload" href="{{site.cssurl}}/main.css?{{site.time | date: '%s%N'}}" as="style">
+  {% include scripts-preload.html %}
   <link rel="stylesheet" href="{{site.cssurl}}/main.css?{{site.time | date: '%s%N'}}">
 {% endif %}
 
-<script nonce="9E0PxfbyzfJt0hRmfGTe6Op8mQE">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer', '{{site.gtm_id}}');</script>
+

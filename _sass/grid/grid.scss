@@ -5,36 +5,29 @@
   grid-template-columns: repeat(12, [col-start] 1fr);
   grid-template-rows: auto [last-line];
   grid-gap: $grid-gap;
+  max-width: $container-width;
+  padding: $container-padding;
+  @include media(desktop) {
+    padding: $container-padding-desktop
+  }
 
   > * {
     grid-column: col-start / span 12;
   }
 
-  &:not([class*="container--"]) {
-    max-width: $container-width;
-    padding: $container-padding;
-    @include media(desktop) {
-      padding: $container-padding-desktop
-    }
-  }
-
-  @for $i from 1 through 11 {
-    .container--#{$i} {
-      grid-template-columns: repeat($i, [col-start] 1fr);
-      > * {
-        grid-column: col-start / span $i;
-      }
-    }
-  }
-}
-
-.page {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-height: 100vh;
-
-  > .container {
-    flex-grow: 1;
-  }
+  //&:not([class*="container--"]) {
+  //  padding: $container-padding;
+  //  @include media(desktop) {
+  //    padding: $container-padding-desktop
+  //  }
+  //}
+  //
+  //@for $i from 1 through 11 {
+  //  .container--#{$i} {
+  //    grid-template-columns: repeat($i, [col-start] 1fr);
+  //    > * {
+  //      grid-column: col-start / span $i;
+  //    }
+  //  }
+  //}
 }
