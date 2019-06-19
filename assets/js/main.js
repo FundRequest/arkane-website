@@ -69,6 +69,6 @@
   });
 
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('../../service-worker.js?' + w.creation);
+    navigator.serviceWorker.register('../../service-worker.js?v=' + w.creation);
   }
 })(window);
