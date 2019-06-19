@@ -1,7 +1,7 @@
 'use strict';
 
 var debug = false;
-var version = 'v1::3';
+var version = 'v1::4';
 var offlineFundamentals = [
   '',
   '/site.webmanifest',
@@ -11,7 +11,6 @@ var offlineFundamentals = [
   '/pages/terms.html',
   '/assets/css/main.css',
   '/assets/css/terms.css',
-  '/assets/img',
   '/assets/js/main.js',
 ];
 
