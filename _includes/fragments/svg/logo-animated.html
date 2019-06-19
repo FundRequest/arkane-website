@@ -1,6 +1,6 @@
-<symbol id="image-logo-animated-light" viewBox="0 0 334 66">
+<svg width="204" height="42" viewBox="0 0 334 66">
   <defs>
-    <linearGradient id="arkane-gradient-animated" x1="0%" y1="0%" x2="100%" y2="0%">
+    <linearGradient id="arkane-gradient-logo" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="-.4" stop-color="#f74989">
         <animate id="anim" attributeName="offset" from="-.4" to="1" dur="1000ms" fill="freeze" begin="2s;anim.end+5000ms"></animate>
         <animate id="anim2" attributeName="offset" from="-.8" to="-2" dur="220ms" fill="freeze" begin="anim.end+500ms"></animate>
@@ -19,30 +19,29 @@
       </stop>
       <stop offset="1" stop-color="#f74989"></stop>
     </linearGradient>
-
     <style>
-    .text {
-      font-size: 29px;
-      stroke: #636363;
-      fill: #636363;
-      stroke-miterlimit: 10;
-      stroke-width: 0.25px;
-      font-family: HelveticaNeue-Thin, Helvetica Neue;
-      letter-spacing: 0.04em;
-    }
+      .text {
+        font-size: 29px;
+        stroke: #636363;
+        fill: #636363;
+        stroke-miterlimit: 10;
+        stroke-width: 0.25px;
+        font-family: HelveticaNeue-Thin, Helvetica Neue;
+        letter-spacing: 0.04em;
+      }
 
-    .text-small {
-      font-size: 25px;
-      letter-spacing: 0.04em;
-    }
+      .text-small {
+        font-size: 25px;
+        letter-spacing: 0.04em;
+      }
 
-    .path-a {
-      clip-path: url(#clip-path-a-animated);
-    }
+      .path-a {
+        clip-path: url(#clip-path-a-animated);
+      }
 
-    .path-dash {
-      clip-path: url(#clip-path-dash-animated);
-    }
+      .path-dash {
+        clip-path: url(#clip-path-dash-animated);
+      }
     </style>
     <clipPath id="clip-path-a-animated" transform="translate(-1 0)">
       <path fill="none"
@@ -66,14 +65,13 @@
       <g>
         <g class="path-a">
           <polygon fill="#f74989" points="0,0 0,66 84,66 84,0"></polygon>
-          <polygon fill="url(#arkane-gradient)" points="0,0 0,66 84,66 84,0"></polygon>
+          <polygon fill="url(#arkane-gradient-logo)" points="0,0 0,66 84,66 84,0"></polygon>
         </g>
         <g class="path-dash">
           <polygon fill="#f74989" points="0,0 0,66 84,66 84,0"></polygon>
-          <polygon fill="url(#arkane-gradient)" points="0,0 0,66 84,66 84,0"></polygon>
+          <polygon fill="url(#arkane-gradient-logo)" points="0,0 0,66 84,66 84,0"></polygon>
         </g>
       </g>
     </g>
   </g>
-</symbol>
-
+</svg>
