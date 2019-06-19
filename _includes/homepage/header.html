@@ -6,11 +6,9 @@
     {% include homepage/fragments/intro.html %}
 
     <div class="intro-right header__image__container">
-      <svg class="header__image">
-        <use xlink:href="#image-header-homepage"></use>
-      </svg>
+      {% include fragments/symbols/header-homepage.html %}
       {% comment %}
-<!--      <img class="header__image" src="{{site.imgurl}}/homepage/arkane-visual-homepage.svg" alt="arkane crypto wallet"/>-->
+<!--      <img class="header__image" src="{{site.imgurl}}/homepage/arkane-visual-homepage.svg?{{site.time | date: '%s%N'}}" alt="arkane crypto wallet"/>-->
 <!--      <div class="header__play-button">-->
 <!--        {% include fragments/video/page-video-play-button.html %}-->
 <!--      </div>-->

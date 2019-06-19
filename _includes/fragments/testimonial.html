@@ -2,7 +2,7 @@
   <div class="tm__testimonial__content">
     <div class="tm__testimonial__author">
       <div class="tm__testimonial__photo">
-        <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="{{ site.imageurl }}/{{ include.image }}" alt="{{ include.name }} - {{ include.description}}">
+        <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="{{ site.imageurl }}/{{ include.image }}?{{site.time | date: '%s%N'}}" alt="{{ include.name }} - {{ include.description}}">
       </div>
       <div class="tm__testimonial__id">
         <div class="tm__testimonial__name">
