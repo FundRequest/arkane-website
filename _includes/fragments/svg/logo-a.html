@@ -1,0 +1,25 @@
+<svg viewBox="0 0 85 66" class="{{include.class}}" {%if include.width.length > 0 && include.height.length > 0 %} width="{{include.width}}" height="{{include.height}}" {% endif %}>
+  <defs>
+    <linearGradient id="logo-a-arkane-gradient{{include.class}}" x1="0%" y1="0%" x2="100%" y2="0%" gradientTransform="rotate(-8)">
+      <stop offset="0" stop-color="#dd49f8"></stop>
+      <stop offset="0.4" stop-color="#f74989"></stop>
+      <stop offset="0.4001" stop-color="#f74989"></stop>
+      <stop offset="1" stop-color="#f74989"></stop>
+    </linearGradient>
+    <clipPath id="clip-path-a{{include.class}}" transform="translate(-1 0)">
+      <path fill="none"
+            d="M63.91,31.68C55.09,17.07,46.59,2.93,45.62,1.62A3.86,3.86,0,0,0,43.38,0S43.16,0,43,0H43c-.12,0-.34,0-.34,0a3.86,3.86,0,0,0-2.24,1.59c-1,1.31-9.47,15.45-18.29,30.06C12,48.46,1,66,1,66H12L39.41,21.05s1.88-3.17,3.58-3.12h0c1.69-.05,3.58,3.12,3.58,3.12L74,66H85S74.05,48.46,63.91,31.68Z"></path>
+    </clipPath>
+    <clipPath id="clip-path-dash{{include.class}}" transform="translate(-1 0)">
+      <path fill="none" d="M47,30H39a3,3,0,0,0,0,6h8a3,3,0,0,0,0-6Z"></path>
+    </clipPath>
+  </defs>
+  <g class="path-a" style="clip-path: url(#clip-path-a{{include.class}})">
+    <polygon fill="#f74989" points="0,0 0,66 84,66 84,0"></polygon>
+    <polygon fill="url(#logo-a-arkane-gradient{{include.class}})" points="0,0 0,66 84,66 84,0"></polygon>
+  </g>
+  <g class="path-dash" style="clip-path: url(#clip-path-dash{{include.class}})">
+    <polygon fill="#f74989" points="0,0 0,66 84,66 84,0"></polygon>
+    <polygon fill="url(#logo-a-arkane-gradient{{include.class}})" points="0,0 0,66 84,66 84,0"></polygon>
+  </g>
+</svg>

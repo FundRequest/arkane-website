@@ -6,18 +6,18 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="theme-color" content="#000000">
-<link rel="manifest" href="/site.webmanifest?{{site.time | date: '%s%N'}}">
-<link rel="apple-touch-icon" href="/icon.png?{{site.time | date: '%s%N'}}">
-<link rel="shortcut icon" href="/favicon.ico?{{site.time | date: '%s%N'}}" type="image/x-icon" sizes="16x16 24x24 32x32 64x64"/>
+<link rel="manifest" href="/site.webmanifest?v={{site.time | date: '%s%N'}}">
+<link rel="apple-touch-icon" href="/icon.png?v={{site.time | date: '%s%N'}}">
+<link rel="shortcut icon" href="/favicon.ico?v={{site.time | date: '%s%N'}}" type="image/x-icon" sizes="16x16 24x24 32x32 64x64"/>
 
 {% if page.page == 'terms-and-conditions-raw' %}
   <meta name="robots" content="noindex, nofollow">
-  <link rel="preload" href="{{site.cssurl}}/terms.css?{{site.time | date: '%s%N'}}" as="style">
-  <link rel="stylesheet" href="{{site.cssurl}}/terms.css?{{site.time | date: '%s%N'}}">
+  <link rel="preload" href="{{site.cssurl}}/terms.css?v={{site.time | date: '%s%N'}}" as="style">
+  <link rel="stylesheet" href="{{site.cssurl}}/terms.css?v={{site.time | date: '%s%N'}}">
 {% else %}
-  <link rel="preload" href="{{site.cssurl}}/main.css?{{site.time | date: '%s%N'}}" as="style">
+  <link rel="preload" href="{{site.cssurl}}/main.css?v={{site.time | date: '%s%N'}}" as="style">
   {% include scripts-preload.html %}
-  <link rel="stylesheet" href="{{site.cssurl}}/main.css?{{site.time | date: '%s%N'}}">
+  <link rel="stylesheet" href="{{site.cssurl}}/main.css?v={{site.time | date: '%s%N'}}">
 {% endif %}
 
 

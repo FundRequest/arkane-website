@@ -2,7 +2,8 @@
   // Avoid `console` errors in browsers that lack a console.
   (function() {
     var method;
-    var noop = function () {};
+    var noop = function() {
+    };
     var methods = [
       'assert', 'clear', 'count', 'debug', 'dir', 'dirxml', 'error',
       'exception', 'group', 'groupCollapsed', 'groupEnd', 'info', 'log',
@@ -10,7 +11,7 @@
       'timeline', 'timelineEnd', 'timeStamp', 'trace', 'warn'
     ];
     var length = methods.length;
-    var console = (window.console = window.console || {});
+    var console = (w.console = w.console || {});
 
     while (length--) {
       method = methods[length];
@@ -58,7 +59,7 @@
       j.async = true;
       j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
       f.parentNode.insertBefore(j, f);
-    })(window, document, 'script', 'dataLayer', window.gtm_id);
+    })(w, document, 'script', 'dataLayer', w.gtm_id);
   }
 
   document.addEventListener('DOMContentLoaded', function() {
@@ -68,6 +69,6 @@
   });
 
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('../../service-worker.js');
+    navigator.serviceWorker.register('../../service-worker.js?v=' + w.creation);
   }
 })(window);
