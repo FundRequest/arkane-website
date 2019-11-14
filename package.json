@@ -17,7 +17,7 @@
     "url": "https://github.com/FundRequest/arkane-website.git"
   },
   "scripts": {
-    "run": "bundle exec jekyll serve"
+    "run": "bundle exec jekyll serve --port 4001"
   },
   "dependencies": {
     "npm": "^6.9.0"

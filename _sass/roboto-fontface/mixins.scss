@@ -6,7 +6,6 @@ $roboto-font-path: '../../../fonts' !default;
 
     @font-face {
         font-family: '#{$variant}';
-        font-display: swap;
         src: url('#{$font-full-path}-#{$type}.eot');
         src: local('#{$variant} #{$type}'),
              local('#{$variant}-#{$type}'),
@@ -17,6 +16,7 @@ $roboto-font-path: '../../../fonts' !default;
              url('#{$font-full-path}-#{$type}.svg##{$variant}') format('svg');
         font-weight: $weight;
         font-style: $style;
+        font-display: swap;
     }
 
     //@font-face {
