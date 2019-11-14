@@ -59,7 +59,7 @@
       j.async = true;
       j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
       f.parentNode.insertBefore(j, f);
-    })(w, document, 'script', 'dataLayer', w.gtm_id);
+    })(window, document, 'script', 'dataLayer', window.gtm_id);
   }
 
   document.addEventListener('DOMContentLoaded', function() {
