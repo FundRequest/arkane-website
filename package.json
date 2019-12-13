@@ -20,6 +20,6 @@
     "run": "bundle exec jekyll serve --port 4001"
   },
   "dependencies": {
-    "npm": "^6.9.0"
+    "npm": "^6.13.4"
   }
 }
